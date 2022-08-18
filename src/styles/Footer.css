@@ -1,0 +1,43 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footer-hero{
+    display: flex;
+    height: 85px;
+    
+    justify-content: space-around;
+    align-items: center;
+    background-color: #dc9a4fc4;
+}
+
+.footer-links-nav{
+    width: 200px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+   
+
+    
+}
+
+.footer-links-sociales{
+    width: 450px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+  
+    
+}
+
+.footer-down{
+ text-align: center;
+ background-color: rgba(22, 22, 22, 0.958);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
