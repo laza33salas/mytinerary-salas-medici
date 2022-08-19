@@ -1,12 +1,16 @@
-import Hero from './components/Hero';
-import Footer from './components/Footer';
+// import Hero from './components/Hero';
+// import Footer from './components/Footer';
 import './App.css';
+import CarouselCity from './components/CarouselCity';
+
 
 function App() {
   return (
     <div className="App">
-      <Hero/>
-      <Footer/>
+    {/* <Hero/> */}
+    <CarouselCity/>
+    {/* <Footer/> */}
+      
     </div>
     
   );
