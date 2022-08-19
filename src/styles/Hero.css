@@ -6,7 +6,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
+    height: 120vh;
+    width: 100%;
 }
 
 .hero-button{
@@ -14,22 +15,65 @@
     height: 80px;
     border-radius: 10%;
     border: 3px solid black;
-    
     font-size: 25px;
     font-family: fantasy;
-
     background-color: #dc9a4fc4;
 
 
 }
 
 .hero-tittle{
-font-family:fantasy ;
-font-size: 130px;
+    font-family: fantasy;
+    font-size: 130px;
+    text-shadow: 5px 5px 10px #db8a2e !important;
+
 }
 
 .hero-slogan{
     font-family: fantasy;
     font-size: 50px;
-    text-shadow: 2px 3px 1px white;
+    text-shadow: 2px 3px 6px #db8a2e;
+
+}
+
+@media(min-width: 320px){
+    .hero-tittle{
+        font-size: 50px;
+        text-shadow: 1px 2px 6px #dc9a4fc4;
+        }
+        .hero-slogan{
+            width: 50%;
+            font-size: 25px;
+            text-shadow: 1px 1px 10px #dc9a4fc4;
+            text-align: center;
+        }
+        .hero-container{
+            min-height: 80vh;
+            width: 100%;
+        }
+        .hero-button{
+            width: 200px;
+            height: 60px;
+            font-size: 25px;
+        }
+}
+
+@media(min-width: 1024px){
+    .hero-tittle{
+        font-size: 80px;
+        }
+        .hero-slogan{
+            font-size: 35px;
+            padding: 25px;
+            margin-right: 20px;
+        }
+        .hero-container{
+            min-height: 80vh;
+            width: 100%;
+        }
+        .hero-button{
+            width: 200px;
+            height: 60px;
+            font-size: 25px;
+        }
 }
