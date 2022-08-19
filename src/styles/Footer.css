@@ -1,7 +1,7 @@
 .footer{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    min-width: 100%;
 }
 
 .footer-hero{
@@ -30,6 +30,7 @@
 .footer-down{
  text-align: center;
  background-color: rgba(22, 22, 22, 0.958);
+ min-width: 100%;
 }
 
 a{
@@ -38,10 +39,7 @@ a{
 }
 
 @media(min-width: 320px){
-.footer{
 
-    width: 100%;
-    }
     .footer-hero{
         display: flex;
         flex-direction: column;
@@ -59,11 +57,12 @@ a{
         font-size: 15px;
     }
     .footer-down{
-        width: 95%;
+        min-width: 100;
         text-align: center;
-        font-size: 15px;
-        padding: 10px;
+        font-size: 10px;
+       
         background-color: rgb(59, 59, 59);
         margin-right: 30px;
        }
 }
+
