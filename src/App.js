@@ -1,16 +1,18 @@
-import Hero from './components/Hero';
 import './App.css';
-//import CarouselCity from './components/CarouselCity';
+import Hero from './components/Hero';
 import Layout from './Layouts/Layout';
+
+//import CarouselCity from './components/CarouselCity';
+//import UnderConstruction from './components/UnderConstruction';
 
 
 function App() {
   return (
     <div className="App">
-    <Hero/> 
+     <Hero/>  
+     <Layout/> 
     {/* <CarouselCity/> */}
-    <Layout/>
-      
+    {/*  <UnderConstruction/> */}
     </div>
     
   );
