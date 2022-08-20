@@ -2,6 +2,7 @@
 // import Footer from './components/Footer';
 import './App.css';
 import CarouselCity from './components/CarouselCity';
+import Layout from './Layouts/Layout';
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <div className="App">
     {/* <Hero/> */}
     <CarouselCity/>
-    {/* <Footer/> */}
+    <Layout/>
       
     </div>
     
