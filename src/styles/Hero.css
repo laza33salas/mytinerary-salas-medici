@@ -10,18 +10,6 @@
     min-width: 100%;
 }
 
-.hero-button{
-    width: 200px;
-    height: 80px;
-    border-radius: 10%;
-    border: 3px solid black;
-    font-size: 25px;
-    font-family: fantasy;
-    background-color: #dc9a4fc4;
-
-
-}
-
 .hero-tittle{
     font-family: fantasy;
     font-size: 130px;
@@ -35,6 +23,65 @@
     text-shadow: 2px 3px 6px #db8a2e;
 
 }
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+   }
+   
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background:  #dc9a4fc4;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+   }
+   
+   .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: black;
+    text-shadow: 1px 1px 2px #db8a2e !important;
+   }
+   
+   .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: black;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+   
+   .cta:hover:before {
+    width: 100%;
+    background:  #dc9a4fc4;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active {
+    transform: scale(0.95);
+   }
+   
 
 @media(min-width: 320px){
     .hero-tittle{
@@ -50,12 +97,18 @@
         .hero-container{
             min-height: 80vh;
             width: 100%;
+            background-position: -380px 3%;
         }
         .hero-button{
             width: 200px;
             height: 60px;
             font-size: 25px;
         }
+}
+@media(min-width: 768px){
+    .hero-container{
+        background-position: -190px 3%;
+    }
 }
 
 @media(min-width: 1024px){
@@ -70,10 +123,17 @@
         .hero-container{
             min-height: 80vh;
             width: 100%;
+            background-position: 0px 0%;
         }
         .hero-button{
             width: 200px;
             height: 60px;
             font-size: 25px;
+        }
+
+        @media(min-width: 1300px){
+            .hero-container{
+                background-position: 0px 0%;
+            }
         }
 }
