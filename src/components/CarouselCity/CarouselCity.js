@@ -1,4 +1,4 @@
-import Carousel from "./Carousel"
+import Carousel from "../Carousel/Carousel"
 
 
 
@@ -21,7 +21,7 @@ function CarouselCity() {
     
     return (
         <div>
-            <Carousel data={dataCiudad} range={3}/>
+            <Carousel data={dataCiudad} range={4}/>
         </div>
     )
 }

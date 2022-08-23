@@ -1,5 +1,5 @@
-import Layout from "../Layouts/Layout";
-import "../styles/UnderConstruction.css"
+import Layout from "../../Layouts/Layout";
+import "./UnderConstruction.css"
 
 import React from 'react'
 
