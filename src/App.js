@@ -9,7 +9,7 @@ import Layout from './Layouts/Layout';
 function App() {
   return (
     <div className="App">
-     <Hero/>  
+      <Hero/>   
      <Layout/> 
     {/* <CarouselCity/> */}
     {/*  <UnderConstruction/> */}
