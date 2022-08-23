@@ -10,10 +10,10 @@ function Carousel (props){
 
  const cardCarousel = (item) => (
   <div className="carousel-container">
-  <div className="card">
-    <img  className="carousel-imagen" src={item.url} alt="" />
-    <h3>{item.nombre} </h3>
-  </div>
+    <div className="card">
+      <img  className="carousel-imagen" src={item.url} alt="" />
+      <h3>{item.nombre} </h3>
+    </div>
   </div>
  )
 
