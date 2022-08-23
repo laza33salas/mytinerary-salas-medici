@@ -1,19 +1,18 @@
 import './App.css';
-// import Hero from "./components/Hero/Hero"
-// import Layout from "./Layouts/Layout"
-import CarouselCity from "./components/CarouselCity/CarouselCity"
-//import UnderConstruction from './components/UnderConstruction';
+import NewCityPage from './pages/NewCityPage';
+// import CityPage from './pages/CityPage';
+// import Index from "../src/pages/Index"
+
+
+
 
 
 function App() {
   return (
     <div className="App">
-     {/* <Hero/> */}
-     {/* <Layout/> */}
-     <CarouselCity/>
-
-
-    {/*  <UnderConstruction/> */}
+     {/* <Index/> */}
+    {/* <CityPage/> */}
+    <NewCityPage/>
     </div>
     
   );
