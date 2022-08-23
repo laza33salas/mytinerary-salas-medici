@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     min-width: 100%;
+    height: 20vh;
 }
 
 .footer-hero{
@@ -61,7 +62,7 @@ a{
         text-align: center;
         font-size: 10px;
        
-        background-color: rgb(59, 59, 59);
+        background-color: rgba(59, 59, 59, 0.851);
         margin-right: 30px;
        }
 }

@@ -1,0 +1,36 @@
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 10%;
+    min-height: 80vh;
+
+    /* background-color: #dc9a4fc4; */
+      background-color: rgba(59, 59, 59, 0.851); 
+}
+
+.logos{
+    width: 25px!important;
+    margin-top: 25px;
+}
+
+
+
+.parrafos{
+    font-size: 10px;
+    font-weight: bold;
+    color: #dc9a4fc4;
+    text-shadow: 1px 1px 5px #dc9a4fc4;
+}
+
+@media(min-width: 768px){
+    .logos{
+        width: 40px!important;
+        margin-top: 25px;
+    }
+    
+    .parrafos{
+        font-size: 15px;
+    }
+}
