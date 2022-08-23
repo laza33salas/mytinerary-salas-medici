@@ -1,0 +1,19 @@
+.logo{
+    width: 25px!important;
+    margin-top: 25px;
+    position: absolute;
+    top: 0px;
+    left: 90%;
+    
+}
+
+@media(min-width: 768px){
+    .logo{
+        width: 40px!important;
+        margin-top: 25px;
+    }
+    
+    .parrafos{
+        font-size: 15px;
+    }
+}
