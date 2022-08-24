@@ -9,7 +9,7 @@ const pages = [
 ]
 
 const link = (page) =>
-<LinkRouter  to={page.to}>
+<LinkRouter className="containerLinks" to={page.to}>
   { <img alt="casita"  className="logos" src={page.imagen}/>}
  <p className='parrafos'>{page.name}</p>  
  </LinkRouter>
