@@ -4,6 +4,7 @@ import Index from "../src/pages/Index"
 import CityPage from './pages/CityPage';
 import NewCityPage from './pages/NewCityPage';
 import Layout from './Layouts/Layout';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <ScrollToTop/>
         <Layout>
           <Routes>
             <Route path='/' element={<Index/>}/>
