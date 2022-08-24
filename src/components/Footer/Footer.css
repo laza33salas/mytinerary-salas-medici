@@ -14,19 +14,17 @@
     background-color: #dc9a4fc4;
 }
 
-.footer-links-nav{
-    width: 200px;
-    font-size: 25px;
+.container-footerNav{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+
+    
 }
 
-.footer-links-sociales{
-    width: 450px;
-    font-size: 25px;
+.container-sociales{
     display: flex;
-    justify-content: space-evenly; 
 }
+
 
 .footer-down{
  text-align: center;
@@ -34,10 +32,6 @@
  min-width: 100%;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
 
 @media(min-width: 320px){
 
