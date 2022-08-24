@@ -21,36 +21,37 @@ function Carousel (props){
   </div>
  )
 
-useEffect(() => {
+ useEffect(() => {
   let id = setInterval(function () {
-    next()
-
+    if(true){
+      next()
+      
+    }
   }, 4000)
-
   setintervalId(id)
-
   return ()=> clearInterval(intervalId);
 }, [start])
-
 
 
  function back() {
   if(start >= range){
     setStart(start-range)
     setEnd(end-range)
+  } else {
+    setStart(8)
+    setEnd(12)
   }
  }
 
  function next() {
   if (end < dataCiudad.length){
-    setStart(start + range)
     setEnd(end + range)
+    setStart(start + range)
+  } else {
+    setStart(0)
+    setEnd(range)
   }
  }
-
-
-
-
 
 return (
   <div>
