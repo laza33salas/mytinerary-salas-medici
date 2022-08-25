@@ -7,7 +7,6 @@ export const CityPage = () => {
     <>
     <Cities/>
     <UnderConstrction/>
-   
     </>
   )
 }

@@ -6,6 +6,7 @@ const UnderConstruction = () => {
   return (
     <div>
     <div class="hero-container">
+             
          <h1>Page Under Construction</h1>
     </div>
    
