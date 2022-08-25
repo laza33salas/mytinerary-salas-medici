@@ -8,7 +8,7 @@
     margin: 20px;
 }
 
-button {
+.button-pibes {
     border: none;
     padding: 0.7em 2em;
     font-size: 18px;
@@ -22,7 +22,7 @@ button {
                 5px -5px 10px #292929;
    }
    
-   button:hover {
+   .button-pibes:hover {
     background: #212121;
     color: rgb(248, 215, 153);
     transition: background 1s ease;
