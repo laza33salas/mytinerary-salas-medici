@@ -12,21 +12,18 @@ function Carousel (props){
   
   
 
- const cardCarousel = (item) => (
+ const cardCarousel = (data) => (
   <div className="carousel-container">
     <div className="card">
-      <img  className="carousel-imagen" src={item.url} alt="" />
-      <h3>{item.nombre} </h3>
+      <img  className="carousel-imagen" src={data.url} alt="" />
+      <h3>{data.nombre} </h3>
     </div>
   </div>
  )
 
  useEffect(() => {
   let id = setInterval(function () {
-    if(true){
       next()
-      
-    }
   }, 4000)
   setintervalId(id)
   return ()=> clearInterval(intervalId);
@@ -57,11 +54,11 @@ function Carousel (props){
 
 return (
   <div className="container-carousel">
-      <Arrow icon={"Back"} click={back}/>
+      <Arrow icon={"◄ Back"} click={back}/>
     <div className="slide">
       {dataCiudad.slice(start,end).map(cardCarousel)}
     </div>
-      <Arrow icon={"Next"} click={next}/>
+      <Arrow icon={"Next ►"} click={next}/>
   </div>
 )
 

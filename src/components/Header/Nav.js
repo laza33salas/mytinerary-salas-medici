@@ -31,7 +31,7 @@ const link = (page) =>
   return (
     <div className='nav'>
       <button class="btn" onClick={handleOpenMenu}>
-      <span class="btn__visible">|||</span>
+      <span class="btn__visible">☰</span>
     <span class="btn__invisible">Menu</span>
 </button>
       <div className='burgerOn'>

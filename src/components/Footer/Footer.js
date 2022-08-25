@@ -9,7 +9,7 @@ const Footer = () => {
       <div className='footer-hero'>
   
       <div>
-        <img className='marca' src="https://i.imgur.com/EEqXYCf.png" alt="logo" />
+        <img className='marca' src="https://i.imgur.com/IBWun1O.png" alt="logo" />
         </div>
         
         <div className='container-footerNav'>
