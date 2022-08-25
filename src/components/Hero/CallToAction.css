@@ -14,7 +14,7 @@
     left: 0;
     display: block;
     border-radius: 50px;
-    background:  #dc9a4fc4;
+    background:  #982C12;
     width: 45px;
     height: 45px;
     transition: all 0.3s ease;
@@ -22,12 +22,13 @@
    
    .cta span {
     position: relative;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
     letter-spacing: 0.05em;
     color: black;
-    text-shadow: 1px 1px 2px #db8a2e !important;
+
+    text-shadow: 1px 1px 2px #982C12;
    }
    
    .cta svg {

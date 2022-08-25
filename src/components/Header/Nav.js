@@ -30,14 +30,20 @@ const link = (page) =>
 
   return (
     <div className='nav'>
-      <div>
+      <button class="btn" onClick={handleOpenMenu}>
+      <span class="btn__visible">|||</span>
+    <span class="btn__invisible">Menu</span>
+</button>
+      <div className='burgerOn'>
         {open
           ? pages.map(link)
           : null
         }
       </div>
+      
+      <div className='burgerOff'>
       {pages.map(link)}
-      <button onClick={handleOpenMenu}>Boton</button>
+      </div>
     </div>
   )
 }
