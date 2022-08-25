@@ -1,16 +1,20 @@
 .carousel-container{
     display: flex; 
-    width: 390px;
+    width: 290px;
     justify-content: center;
+    
     margin: 20px;
+    background-color: rgb(248, 215, 153);
+    height: 350px;
    
 }
 
 .card{
 width: 290px;
-
 background-color: rgb(233, 233, 233);
-box-shadow: 3px 3px 2px rgb(158, 158, 158);
+box-shadow: 4px 5px 3px rgb(110, 110, 110);
+margin-top: 15px;
+margin-left: 25px;
 }
 
 .carousel-imagen{
@@ -25,6 +29,7 @@ h3{
 
 
 .slide{
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

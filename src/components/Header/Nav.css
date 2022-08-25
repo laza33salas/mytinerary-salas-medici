@@ -23,14 +23,13 @@
     font-size: 10px;
     font-weight: bolder;
     color: black;
-    text-shadow: 1px 1px 5px #dc9a4fc4;
     font-family: 'Varela Round', sans-serif;
-    
- 
 }
 
+
 .containerLinks{
-   
+  text-decoration: none!important;
+  
     width: 10%;
 }
 
