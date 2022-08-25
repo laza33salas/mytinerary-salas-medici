@@ -1,4 +1,6 @@
 import Carousel from "../Carousel/Carousel"
+import "./CarouselCity.css"
+
 
 
 
@@ -20,7 +22,7 @@ function CarouselCity() {
     
     
     return (
-        <div>
+        <div className="container-carousel-city">
             <Carousel data={dataCiudad} range={4}/>
         </div>
     )

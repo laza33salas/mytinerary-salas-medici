@@ -1,4 +1,4 @@
-
+import "./Arrow.css"
 function Arrow(props) {
 
     if (!props.icon) {
@@ -15,9 +15,12 @@ function Arrow(props) {
 
     
     return (
-        <button onClick={props.click}>      
-                {props.icon}
+        <div className="container-boton">
+            <button className="button-pibes" onClick={props.click}>      
+            <span>{props.icon}</span>
         </button>
+
+        </div>
     )
 }
 
