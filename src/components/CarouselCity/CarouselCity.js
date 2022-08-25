@@ -2,6 +2,7 @@ import Carousel from "../Carousel/Carousel"
 
 
 
+
 function CarouselCity() {
     const dataCiudad =[
         {url: "https://images.pexels.com/photos/3132304/pexels-photo-3132304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", nombre:"Hong Kong - China"},

@@ -54,7 +54,7 @@ function Carousel (props){
  }
 
 return (
-  <div>
+  <div className="container-carousel">
     <div className="slide">
       <Arrow icon={"◄"} click={back}/>
       {dataCiudad.slice(start,end).map(cardCarousel)}
