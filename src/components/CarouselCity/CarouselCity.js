@@ -1,5 +1,6 @@
 import Carousel from "../Carousel/Carousel"
 import "./CarouselCity.css"
+import PopularCities from "./PopularCities"
 
 
 
@@ -23,6 +24,7 @@ function CarouselCity() {
     
     return (
         <div className="container-carousel-city">
+            <PopularCities/>
             <Carousel data={dataCiudad} range={4}/>
         </div>
     )
