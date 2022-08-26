@@ -1,12 +1,11 @@
 import React from 'react'
-import CitiesCards from "../components/Cities/CitiesCards"
+import Cities from '../components/Cities/Cities'
 
 
 export const CityPage = () => {
   return (
     <>
-    <CitiesCards/>
-
+    <Cities/>
     </>
   )
 }

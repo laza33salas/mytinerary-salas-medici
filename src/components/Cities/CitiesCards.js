@@ -1,6 +1,6 @@
 import React from 'react'
- import "./CitiesCards.css"
-import Cities from "./Cities"
+ import "./Cities.css"
+
 
  const CitiesCards = () => {
     const dataCiudad =[
@@ -18,9 +18,19 @@ import Cities from "./Cities"
         {url: "https://images.pexels.com/photos/3727262/pexels-photo-3727262.jpeg?auto=compress&cs=tinysrgb&w=1600", nombre:"Dubai - United Arab Emirates"},
        ]
   
+       const cards = (item) => (
+        <div className="card-container">
+          <div className="card">
+            <img  className="card-imagen" src={item.url} alt="" />
+            <h3 className='card-tittle'>{item.nombre} </h3>
+          </div>
+        </div>
+       )
+
+
     return  (
-    <div className='citiesCard-container'>
-        <Cities data={dataCiudad}/>
+    <div className='cities-container'>
+        {dataCiudad.map(cards)}
     </div>
   )
 }
