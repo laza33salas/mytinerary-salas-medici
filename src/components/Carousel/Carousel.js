@@ -14,9 +14,9 @@ function Carousel (props){
 
  const cardCarousel = (data) => (
   <div className="carousel-container">
-    <div className="card">
+    <div className="carousel-card">
       <img  className="carousel-imagen" src={data.url} alt="" />
-      <h3>{data.nombre} </h3>
+      <h3 className="carousel-card-tittle">{data.nombre} </h3>
     </div>
   </div>
  )

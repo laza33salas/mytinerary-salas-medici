@@ -1,9 +1,13 @@
 import React from 'react'
-import "./Cities.css"
+import CitiesCards from './CitiesCards'
 
 const Cities = () => {
+  
+
   return (
-    <h1>Cities</h1>
+    <div className='citiesCard-container'>
+      <CitiesCards/>
+    </div>
   )
 }
 
