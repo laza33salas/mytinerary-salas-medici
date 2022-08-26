@@ -8,7 +8,8 @@ const FooterNav = () => {
   
 const navegacion = [
   {name: "Home", to:"/"},
-  {name: "Cities", to:"/cities"}
+  {name: "Cities", to:"/cities"},
+  {name: "New City", to:"/newcity"}
 ]
 
 const linkNav = (item) => 
