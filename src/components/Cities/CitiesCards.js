@@ -30,7 +30,7 @@ const CitiesCards = () => {
           <h3 className="card-tittle-back">{item.nombre}</h3>
           <p className='card-p-back'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptatum quisquam sapiente eum dolorum dolores, .</p>
           <div className='link'>
-            <a className='card-a-front' href="https://www.youtube.com/watch?v=Y1NSVRkQEVI&t=44s">Details</a>
+            <a className='card-a-front' href={item.nombre}>Details</a>
           </div>
         </div>
 
