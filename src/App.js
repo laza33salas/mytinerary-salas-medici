@@ -20,8 +20,8 @@ function App() {
           <Routes>
            <Route path='*' element={<NotFound/>}/>
             <Route path='/' element={<Index/>}/>
-            <Route path='/cities' element={<CityPage/>}/>
-            <Route path='/newcity' element={<NewCityPage/>}/>
+            <Route path='/Cities' element={<CityPage/>}/>
+            <Route path='/NewCity' element={<NewCityPage/>}/>
           </Routes>
         </Layout>
       </BrowserRouter>
