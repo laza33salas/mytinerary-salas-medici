@@ -2,6 +2,8 @@ import React from 'react'
 import FooterSocial from './FooterSocial'
 import FooterNav from "./FooterNav"
 import "./Footer.css"
+import "../ScrollToTop/ScrollToTopPage"
+import ScrollToTopPage from '../ScrollToTop/ScrollToTopPage'
 
 const Footer = () => {
   return (
@@ -12,6 +14,10 @@ const Footer = () => {
         <img className='marca' src="https://i.imgur.com/IBWun1O.png" alt="logo" />
         </div>
         
+          <div className='ScrollButton'>
+            <ScrollToTopPage/>
+          </div>
+        
         <div className='container-footerNav'>
           <FooterNav/>
         </div>
@@ -20,6 +26,7 @@ const Footer = () => {
           <div className='container-sociales'>
         <FooterSocial/>
           </div>
+
   
       </div>
 
