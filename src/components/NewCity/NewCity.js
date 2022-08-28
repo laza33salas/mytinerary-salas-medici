@@ -1,12 +1,16 @@
 import React from 'react'
-import UnderConstruction from '../UnderConstrction/UnderConstruction'
 import "./NewCity.css"
+import Input from '../Cities/Input'
 
 const NewCity = () => {
   return (
     <div>
         <h1>NewCity</h1>
-        <UnderConstruction/>
+        {/* <Input dato={}/>
+        <Input dato={}/>
+        <Input dato={}/>
+        <Input dato={}/> */}
+        
     </div>
   )
 }
