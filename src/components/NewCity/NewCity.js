@@ -1,14 +1,17 @@
 import React from 'react'
 import "./NewCity.css"
-import Input from '../Cities/Input'
+import Input from "../Input/Input"
 
 const NewCity = () => {
   return (
     <div className='inputContainer'>
-         <Input/>
-         <Input/>
-         <Input/>
-         <Input/> 
+      <div className='inputs'>
+         <Input dato={"Add new city"} placeholder={"City"}/>
+         <Input dato={"Add country"} placeholder={"Country"}/>
+         <Input dato={"Add photo URL"}placeholder={"Photo"}/>
+         <Input dato={"Add population"}placeholder={"Population"}/> 
+         <Input dato={"Add fundation"} placeholder={"Fundation"}/> 
+      </div>
     </div>
   )
 }
