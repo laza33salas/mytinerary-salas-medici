@@ -16,7 +16,7 @@ const searcher = e =>{
   return (
     <div className='form-container'>
       <form >
-        <legend>{props.dato}</legend>
+        <legend className="legendInput">{props.dato}</legend>
         <input className='input-style' type="text" placeholder={props.placeholder} value={search} onChange={searcher}/>    
       </form>
     

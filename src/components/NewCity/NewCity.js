@@ -5,6 +5,7 @@ import Input from "../Input/Input"
 const NewCity = () => {
   return (
     <div className='inputContainer'>
+      <h1 className="titleInputs">Create New City</h1>
       <div className='inputs'>
          <Input dato={"Add new city"} placeholder={"City"}/>
          <Input dato={"Add country"} placeholder={"Country"}/>
