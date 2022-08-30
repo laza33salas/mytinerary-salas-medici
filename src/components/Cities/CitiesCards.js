@@ -1,7 +1,7 @@
 import React from 'react'
 import "./CitiesCards.css"
 import { Link as LinkRouter } from "react-router-dom"
-import Input from "./Input"
+import Input from "../Input/Input"
 
 
 const CitiesCards = () => {
@@ -80,7 +80,7 @@ const CitiesCards = () => {
 
   return (
     <div>
-      <Input />
+      <Input placeholder={"Search"}/>
 
       <div className='citiesCard-container'>
         {dataCiudad.map(cards)}

@@ -16,8 +16,8 @@ const searcher = e =>{
   return (
     <div className='form-container'>
       <form >
-        <label>{props.dato}</label>
-        <input className='search' type="text" placeholder='Search' value={search} onChange={searcher}/>    
+        <legend>{props.dato}</legend>
+        <input className='input-style' type="text" placeholder={props.placeholder} value={search} onChange={searcher}/>    
       </form>
     
     </div>

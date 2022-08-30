@@ -10,3 +10,9 @@ form{
     align-items: center;
     justify-content: center;
 }
+
+.inputs{
+    margin: 25px;
+    width: 800px;
+   
+}
