@@ -13,6 +13,7 @@ const NewCity = () => {
          <Input dato={"Add population"}placeholder={"Population"}/> 
          <Input dato={"Add fundation"} placeholder={"Fundation"}/> 
       </div>
+      <button className="botonNC">Create</button>
     </div>
   )
 }
