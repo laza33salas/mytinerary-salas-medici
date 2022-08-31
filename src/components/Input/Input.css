@@ -1,17 +1,27 @@
 .form-container{
-    background-color: wheat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    width: 290px;
+    height: 80px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .input-style{
  height: 20px;
  width: 200px;
  align-self: center;
-
  font-size: 15px;
+ background-color: transparent;
+ border-top: none;
+ border-left: none;
+ border-right: none;
+ font-family: 'Varela Round', sans-serif;
+}
+
+.input-style:hover{
+    border-bottom: 3px solid black;
 }
 
 .button-search{
@@ -19,4 +29,9 @@
     margin-left: 15px;
 
     font-size: 15px;
+}
+
+.legendInput{
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bolder;
 }

@@ -96,6 +96,11 @@ margin: 15px;
     transform: perspective(600px) rotateY(360deg);
 }
 
+.searchContainer{
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+}
 
 @media(min-width: 768px){
     .card{

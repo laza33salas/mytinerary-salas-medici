@@ -4,7 +4,7 @@ form{
 
 .inputContainer{
     background-color: wheat;
-    height: 50vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +12,35 @@ form{
 }
 
 .inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 25px;
     width: 800px;
-   
+    background-color: rgb(244, 197, 111);
+    width: 290px;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px black;
+}
+
+.titleInputs{
+    font-family: fantasy;
+    margin-bottom: 10px;
+    border-bottom: 3px solid black;
+}
+
+.botonNC{
+    background-color: rgb(253, 172, 106);
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 10px black;
+}
+
+.botonNC:hover{
+    background-color: rgb(255, 144, 53);
 }

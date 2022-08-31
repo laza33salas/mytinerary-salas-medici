@@ -80,7 +80,9 @@ const CitiesCards = () => {
 
   return (
     <div>
+      <div className="searchContainer">
       <Input placeholder={"Search"}/>
+      </div>
 
       <div className='citiesCard-container'>
         {dataCiudad.map(cards)}
