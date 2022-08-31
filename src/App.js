@@ -6,7 +6,7 @@ import NewCityPage from './pages/NewCityPage';
 import Layout from './Layouts/WebSiteLayout';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import NotFound from './pages/NotFound';
-
+import Details from './pages/Details'
 
 
 
@@ -18,10 +18,11 @@ function App() {
       <ScrollToTop/>
         <Layout>
           <Routes>
-           <Route path='*' element={<NotFound/>}/>
             <Route path='/' element={<Index/>}/>
             <Route path='/Cities' element={<CityPage/>}/>
             <Route path='/NewCity' element={<NewCityPage/>}/>
+            <Route path='/Cities/Details' element={<Details/>}/>
+           <Route path='*' element={<NotFound/>}/>
           </Routes>
         </Layout>
       </BrowserRouter>
