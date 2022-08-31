@@ -1,6 +1,7 @@
 import "./Carousel-cards.css"
 import Arrow from "./Arrow"
 import {useEffect, useState} from "react"
+import {Link as LinkRouter} from "react-router-dom"
 
 function Carousel (props){
  
@@ -8,15 +9,17 @@ function Carousel (props){
   const [start, setStart] = useState(0)
   const [end, setEnd] = useState(start + range)
   const [intervalId, setintervalId] = useState()
-  const dataCiudad = props.data
+  const cities = props.data
   
   
 
  const cardCarousel = (data) => (
   <div className="carousel-container">
     <div className="carousel-card">
-      <img  className="carousel-imagen" src={data.url} alt="" />
-      <h3 className="carousel-card-tittle">{data.nombre} </h3>
+    <LinkRouter to={"/Cities/Details/" + data.city}>
+    <img  className="carousel-imagen" src={data.photo} alt="" />
+    </LinkRouter>
+      <h3 className="carousel-card-tittle">{data.city} </h3>
     </div>
   </div>
  )
@@ -41,7 +44,7 @@ function Carousel (props){
  }
 
  function next() {
-  if (end < dataCiudad.length){
+  if (end < cities.length){
     setEnd(end + range)
     setStart(start + range)
   } else {
@@ -56,7 +59,7 @@ return (
   <div className="container-carousel">
       <Arrow icon={"◄ Back"} click={back}/>
     <div className="slide">
-      {dataCiudad.slice(start,end).map(cardCarousel)}
+      {cities.slice(start,end).map(cardCarousel)}
     </div>
       <Arrow icon={"Next ►"} click={next}/>
   </div>
