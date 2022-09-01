@@ -9,8 +9,6 @@ import NotFound from './pages/NotFound';
 import Details from './pages/Details'
 
 
-
-
 function App() {
   return (
     <div className="App">
@@ -21,7 +19,7 @@ function App() {
             <Route path='/' element={<Index/>}/>
             <Route path='/Cities' element={<CityPage/>}/>
             <Route path='/NewCity' element={<NewCityPage/>}/>
-            <Route path='/Cities/Details' element={<Details/>}/>
+            <Route path='/Cities/:id' element={<Details/>}/>
            <Route path='*' element={<NotFound/>}/>
           </Routes>
         </Layout>
