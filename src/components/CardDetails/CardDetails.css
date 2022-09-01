@@ -1,0 +1,82 @@
+.CardDetails-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+     width: 100%;
+     height: 100vh;
+     background-color: wheat;
+     
+ }
+ .h2-cardDetails{
+    font-family: fantasy;
+    font-size: 30px;
+ }
+ .carousel-container{
+    display: flex; 
+    width: 290px;
+    justify-content: center;
+    
+    margin: 20px;
+    background-color: rgb(248, 215, 153);
+    height: 350px;
+   
+}
+
+.h2-details{
+    font-family: fantasy;
+    font-size: 30px;
+}
+.carousel-card{
+width: 290px;
+background-color: rgb(233, 233, 233);
+box-shadow: 4px 5px 3px rgb(110, 110, 110);
+margin-top: 15px;
+margin-left: 25px;
+}
+
+.descripcion-details{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    font-family: 'Varela Round', sans-serif;
+    align-items: center;
+ 
+    
+}
+
+.carousel-imagen{
+    width: 100%;
+    height: 250px;
+}
+
+.carousel-card-tittle{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.slide{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+ 
+ .searchContainer{
+     background-color: wheat;
+     display: flex;
+     justify-content: center;
+ }
+ 
+ @media(min-width: 768px){
+     .card{
+         width: 290px;
+         
+         
+         }
+ }

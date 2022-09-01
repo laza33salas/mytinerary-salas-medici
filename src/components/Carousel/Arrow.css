@@ -1,0 +1,49 @@
+/* From uiverse.io by @bhaveshxrawat */
+
+.container-boton{
+    display: flex;
+    justify-content: center;
+}
+.button-pibes{
+    margin: 20px;
+}
+
+.button-pibes {
+    border: none;
+    padding: 0.7em 2em;
+    font-size: 18px;
+    font-family: 'Varela Round', sans-serif;
+    background-blend-mode: multiply;
+    color: black;
+    font-weight: bolder;
+    border-radius: 9px;
+    background: rgb(248, 215, 153);
+    box-shadow: -5px 5px 10px #191919,
+                5px -5px 10px #292929;
+   }
+   
+   .button-pibes:hover {
+    background: #212121;
+    color: rgb(248, 215, 153);
+    transition: background 1s ease;
+    box-shadow: -5px 5px 10px #191919,
+                5px -5px 10px #292929;
+   }
+   
+   button:active {
+    transition: box-shadow .1s ease;
+    border-radius: 9px;
+    color: rgb(248, 215, 153);
+    background: #212121;
+    box-shadow: inset -5px 5px 10px #191919,
+                 inset 5px -5px 10px #292929;
+   }
+   
+   span {
+    
+    transition: opacity 0.2s ease;
+   }
+   
+   button:hover span {
+    opacity: 0.7;
+   }

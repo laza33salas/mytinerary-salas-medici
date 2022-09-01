@@ -1,0 +1,11 @@
+.footer-links-nav{
+width: 250px;
+
+display: flex;
+justify-content: space-around;
+}
+.links{
+    text-decoration: none;
+    color: black;
+}
+
