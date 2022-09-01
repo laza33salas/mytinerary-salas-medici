@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,  } from 'react'
 import "./CitiesCards.css"
 import { Link as LinkRouter } from "react-router-dom"
 import Input from "../Input/Input"
@@ -8,6 +8,8 @@ import axios from "axios"
 const CitiesCards = () => {
  
 const [cities, setCities] = useState([])
+
+
 
 useEffect(()=>{
   axios.get("http://localhost:4000/cities/")
@@ -26,7 +28,7 @@ useEffect(()=>{
         <h3 className="card-tittle-back">{item.city}</h3>
         <p className='card-p-back'>{item.description}</p>
         <div className='link'>
-          <LinkRouter className='card-a-front' to={"/Cities/Details" + item.city}>Details</LinkRouter>
+          <LinkRouter className='card-a-front' to={`/Cities/${item._id}`}>Details</LinkRouter>
         </div>
       </div>
 
