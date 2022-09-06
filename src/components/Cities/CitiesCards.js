@@ -3,6 +3,7 @@ import "./CitiesCards.css"
 import { Link as LinkRouter } from "react-router-dom"
 import Input from "../Input/Input"
 import axios from "axios"
+import apiurl from '../api'
 
 
 const CitiesCards = () => {
@@ -12,7 +13,7 @@ const [cities, setCities] = useState([])
 
 
 useEffect(()=>{
-  axios.get("http://localhost:4000/cities/")
+  axios.get( apiurl + '/cities/')
     .then(response => setCities(response.data.response))
     
 },[])

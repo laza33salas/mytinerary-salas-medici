@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import "./CardDetails.css"
 import { Link as LinkRouter } from "react-router-dom"
 import axios from "axios"
+import apiurl from '../api'
 
 const CardDetails = () => {
 
@@ -11,7 +12,7 @@ const CardDetails = () => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/cities/${id}`)
+        axios.get(apiurl + `/cities/${id}`)
             .then(response => setCity(response.data.response))
 
     }, [])
