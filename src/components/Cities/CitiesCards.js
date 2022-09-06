@@ -2,24 +2,24 @@ import "./CitiesCards.css"
 import { Link as LinkRouter } from "react-router-dom"
 import Input from "../Input/Input"
 import { useGetAllCitiesQuery } from "../../features/citiesApi"
-
+import { useEffect } from "react"
 
 
 const CitiesCards = () => {
  
-const {
-  //informacion que necesito usar, es el body
-  data: cities ,
-  //
-  error,
-  //Una propiedad que me indica si se esta cargando ese dato
-  isLoading,
-  //Una propiedad que me indica si se completo la carga con exito
-  isSuccess,
-  //Una propiedad en caso de que haya fallado
-  isFailed
-  
-} = useGetAllCitiesQuery()
+  const {
+    //informacion que necesito usar, es el body
+    data: cities ,
+    //
+    error,
+    //Una propiedad que me indica si se esta cargando ese dato
+    isLoading,
+    //Una propiedad que me indica si se completo la carga con exito
+    isSuccess,
+    //Una propiedad en caso de que haya fallado
+    isFailed
+    
+  } = useGetAllCitiesQuery()
 
   const cards = (item) => (
     <div className="card">
@@ -37,8 +37,10 @@ const {
       </div>
 
     </div>
-
   )
+
+   
+
   return (
     <div>
       <div className="searchContainer">
@@ -47,7 +49,7 @@ const {
 
       <div className='citiesCard-container'>
     
-        {cities.response.map(cards)}
+        {cities?.response.map(cards)}
       </div>
     </div>
   )
