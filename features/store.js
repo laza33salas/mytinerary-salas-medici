@@ -2,7 +2,8 @@ import {
     configureStore
 } from '@reduxjs/toolkit'
 
-import eventsSlice from './features/eventsSlice'
+
+import eventsSlice from './eventsSlice'
 
 //instancia del store
 export default configureUser({

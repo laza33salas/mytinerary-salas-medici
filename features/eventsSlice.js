@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import axios from 'axios'
 
 export const eventsSlice = createSlice({
     name: 'events',
@@ -12,7 +13,7 @@ export const eventsSlice = createSlice({
     reducers: {
         fetchFromServer: (state) => {
             state.events = [{
-                //Profe agrega un objeto evento
+                //Profe agrega un objeto evento {image: "link", price : 20 etc}
             }
             ]
         }
