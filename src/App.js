@@ -7,6 +7,8 @@ import Layout from './Layouts/WebSiteLayout';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import NotFound from './pages/NotFound';
 import Details from './pages/Details'
+import {Provider} from 'react-redux'
+import {store} from 'redux'
 
 
 function App() {
