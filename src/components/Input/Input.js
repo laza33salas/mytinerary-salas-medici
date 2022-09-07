@@ -10,7 +10,7 @@ const readArray = props.inputData
 const inputForm = useRef()
   const sendValue = (e) =>{
     e.preventDefault()
-    props.event((Array.from(inputForm.current), e))
+    props.event(Array.from(inputForm.current), e)
 
     inputForm.current.reset()
   }

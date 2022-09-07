@@ -42,9 +42,6 @@ const CitiesCards = () => {
     </div>
   )
 
-
-
-
   return (
     <div>
       <div className="searchContainer">

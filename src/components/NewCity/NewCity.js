@@ -30,38 +30,36 @@ const NewCity = (props) => {
     value: "",
     placeholder: "New Population"},
 
-    {name: "fundation", 
-    type: "number",
+    {name: "foundation", 
+    type: "date",
     value: "",
     placeholder: "New Fundation"}
   ]
    
-  const [inputValue, setinputValue] = useState(null) 
   
-  const changeValue = (e) =>{
-    setinputValue(e.current.value)
-  }
-
   const createCity = (arrayData) =>{
-    let formData = arrayData
+    let formData = arrayData.filter(input => input.value)
    
+   console.log(formData)
     
     let data = formData.reduce((values,input) =>{
     values[input.name.toLowerCase()] = input.value
     return values
     },{})
-  
+    
+    console.log(data)
+
     axios.post(`http://localhost:4000/cities`, data)
-    .then(res => console.log(res) 
+    .then(res => console.log(res))
     .catch(error => console.log(error))
-    )
+    
   }
+
 
   return (
     <div className='inputContainer'>
       <h1 className="titleInputs">Create New City</h1>
-      <Input inputData={inputNewCity} event={(arrayData) =>createCity(arrayData)} onChange={changeValue}></Input>
-  
+      <Input inputData={inputNewCity} event={(arrayData) =>createCity(arrayData)} ></Input>
     </div>
   )
 }
