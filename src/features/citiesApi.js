@@ -13,9 +13,8 @@ const citiesApi = createApi({
 //Aca vamos a definir todos los endpoints
     endpoints: (builder) =>({
         getAllCities: builder.query({
-            query: () => "/cities"
+            query: (search) => `/cities/?city=${search}`
         })
-
         })
     })
 
