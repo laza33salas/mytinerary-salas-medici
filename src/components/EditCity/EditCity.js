@@ -29,17 +29,17 @@ const EditCity = () => {
         const [value, setValue] = useState(cities?.response[0]._id)
 
   const inputEditCity = [
-   {name: "city", 
+   {name: "City", 
     type: "text",
     value: "",
     placeholder: "Edit City"},
 
-    {name: "country", 
+    {name: "Country", 
     type: "text",
     value: "",
     placeholder: "Edit Country"}, 
 
-    {name: "photo", 
+    {name: "Photo", 
     type: "text",
     value: "",
     placeholder: "Edit Photo"},
@@ -49,12 +49,12 @@ const EditCity = () => {
     value: "",
     placeholder: "Edit Population"},
 
-    {name: "foundation", 
+    {name: "Foundation", 
     type: "date",
     value: "",
     placeholder: "Edit Fundation"},
 
-    {name: "description",
+    {name: "Description",
     type: "text",
     value: "",
     placeholder: "Edit Details"
@@ -93,7 +93,7 @@ const EditCity = () => {
   return (
     <div className='inputContainer'>
       <h1 className="titleInputs">Edit City</h1>
-      <select onChange={changeValue} ref={valueCity}>{cities?.response.map(viewOptions)}</select>
+      <select className='select-edit-city' onChange={changeValue} ref={valueCity}>{cities?.response.map(viewOptions)}</select>
       <Input inputData={inputEditCity} event={(arrayData) =>modifyCity(arrayData)} ></Input>
     </div>
   )

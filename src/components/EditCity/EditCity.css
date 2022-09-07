@@ -46,3 +46,15 @@ form{
 .botonNC:hover{
     background-color: rgb(255, 144, 53);
 }
+
+.select-edit-city{
+    align-self: center;
+    font-size: 15px;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: 'Varela Round', sans-serif;
+    margin: 20px;
+
+}
