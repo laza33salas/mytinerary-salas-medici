@@ -1,7 +1,6 @@
 import React from 'react'
 import "./NewCity.css"
 import Input from "../Input/Input"
-import {useState} from 'react'
 import axios from 'axios'
 
 
@@ -33,7 +32,14 @@ const NewCity = (props) => {
     {name: "foundation", 
     type: "date",
     value: "",
-    placeholder: "New Fundation"}
+    placeholder: "New Fundation"},
+
+    {name: "description",
+    type: "text",
+    value: "",
+    placeholder: "New Details"
+
+    }
   ]
    
   
