@@ -1,4 +1,4 @@
-import {useState,useRef} from 'react'
+import {useRef} from 'react'
 import "./Input.css"
 
 
@@ -18,10 +18,10 @@ const inputForm = useRef()
 
   const createInputsForm = (item) =>{
     return (
-      <>
-        <p>{item.name}</p>
-        <input name={item.name} type={item.type} defaultValue={item.value} placeholder={item.placeholder}/>
-      </>
+      <div >
+        <h4>{item.name}</h4>
+        <input className='input-style' name={item.name} type={item.type} defaultValue={item.value} placeholder={item.placeholder}/>
+      </div>
     )
   }
 
@@ -32,7 +32,7 @@ const inputForm = useRef()
         <legend className="legendInput">{props.dato}</legend>
         {props.children}       
         {readArray.map(createInputsForm)}
-        <button className="botonNC" type='submit'>Pulpo</button>
+        <button className="botonNC" type='submit'>Send</button>
       </form>
     
     </div>

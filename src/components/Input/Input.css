@@ -8,7 +8,6 @@
 }
 
 .input-style{
- 
  align-self: center;
  font-size: 15px;
  background-color: transparent;
@@ -22,14 +21,12 @@
     border-bottom: 3px solid black;
 }
 
-.button-search{
-    height:25px;
-    margin-left: 15px;
-
-    font-size: 15px;
-}
 
 .legendInput{
     font-family: 'Varela Round', sans-serif;
     font-weight: bolder;
+}
+
+.botonNC{
+    margin-top: 20px;
 }
