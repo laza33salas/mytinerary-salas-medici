@@ -5,21 +5,21 @@ import axios from 'axios'
 
 
 
-const NewCity = (props) => {
+const NewCity = () => {
   
 
   const inputNewCity = [
-   {name: "city", 
+   {name: "City", 
     type: "text",
     value: "",
     placeholder: "New City"},
 
-    {name: "country", 
+    {name: "Country", 
     type: "text",
     value: "",
     placeholder: "New Country"}, 
 
-    {name: "photo", 
+    {name: "Photo", 
     type: "text",
     value: "",
     placeholder: "New Photo"},
@@ -29,12 +29,12 @@ const NewCity = (props) => {
     value: "",
     placeholder: "New Population"},
 
-    {name: "foundation", 
+    {name: "Foundation", 
     type: "date",
     value: "",
     placeholder: "New Fundation"},
 
-    {name: "description",
+    {name: "Description",
     type: "text",
     value: "",
     placeholder: "New Details"
@@ -46,14 +46,14 @@ const NewCity = (props) => {
   const createCity = (arrayData) =>{
     let formData = arrayData.filter(input => input.value)
    
-   console.log(formData)
+   console.log("form data:" + formData)
     
     let data = formData.reduce((values,input) =>{
     values[input.name.toLowerCase()] = input.value
     return values
     },{})
     
-    console.log(data)
+    console.log("data:" + data)
 
     axios.post(`http://localhost:4000/cities`, data)
     .then(res => console.log(res))
@@ -65,7 +65,7 @@ const NewCity = (props) => {
   return (
     <div className='inputContainer'>
       <h1 className="titleInputs">Create New City</h1>
-      <Input inputData={inputNewCity} event={(arrayData) =>createCity(arrayData)} ></Input>
+      <Input className='inputs'inputData={inputNewCity} event={(arrayData) =>createCity(arrayData)} ></Input>
     </div>
   )
 }
