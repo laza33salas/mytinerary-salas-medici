@@ -1,25 +1,28 @@
 import "./CitiesCards.css"
 import { Link as LinkRouter } from "react-router-dom"
-import Input from "../Input/Input"
 import { useGetAllCitiesQuery } from "../../features/citiesApi"
-
+import {useState,useRef} from 'react'
 
 
 const CitiesCards = () => {
- 
-const {
-  //informacion que necesito usar, es el body
-  data: cities ,
-  //
-  error,
-  //Una propiedad que me indica si se esta cargando ese dato
-  isLoading,
-  //Una propiedad que me indica si se completo la carga con exito
-  isSuccess,
-  //Una propiedad en caso de que haya fallado
-  isFailed
-  
-} = useGetAllCitiesQuery()
+  const [inputValue, setinputValue] = useState("")  
+  const search = useRef()
+  const changeValue = () =>{
+    setinputValue(search.current?.value)
+  }
+  const {
+    //informacion que necesito usar, es el body
+    data: cities ,
+    //
+    error,
+    //Una propiedad que me indica si se esta cargando ese dato
+    isLoading,
+    //Una propiedad que me indica si se completo la carga con exito
+    isSuccess,
+    //Una propiedad en caso de que haya fallado
+    isFailed
+    
+  } = useGetAllCitiesQuery(inputValue)
 
   const cards = (item) => (
     <div className="card">
@@ -37,17 +40,18 @@ const {
       </div>
 
     </div>
-
   )
+
   return (
     <div>
       <div className="searchContainer">
-      <Input placeholder={"Search"}/>
+      
+      <input type="text" ref={search} onChange={changeValue}></input>
       </div>
 
       <div className='citiesCard-container'>
     
-        {cities.response.map(cards)}
+        {cities?.response.map(cards)}
       </div>
     </div>
   )

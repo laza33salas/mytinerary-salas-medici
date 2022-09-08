@@ -9,7 +9,8 @@ const FooterNav = () => {
 const navegacion = [
   {name: "Home", to:"/"},
   {name: "Cities", to:"/cities"},
-  {name: "New City", to:"/newcity"}
+  {name: "New City", to:"/newcity"},
+  {name: "Edit City", to:"/edit-city"}
 ]
 
 const linkNav = (item) => 
