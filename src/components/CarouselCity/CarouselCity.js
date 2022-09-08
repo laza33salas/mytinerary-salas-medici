@@ -6,7 +6,6 @@ import {useEffect, useState} from "react"
 
 
 
-
 function CarouselCity() {
     const [cities, setCities] = useState([])
     
@@ -15,10 +14,12 @@ function CarouselCity() {
           .then(response => setCities(response.data.response))
           
       },[])
+
+      const slice = cities.slice(0,12)
     return (
         <div className="container-carousel-city">
             <PopularCities/>
-            <Carousel data={cities} range={4}/>
+            <Carousel data={slice} range={4}/>
         </div>
     )
 }
