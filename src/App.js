@@ -7,6 +7,8 @@ import Layout from './Layouts/WebSiteLayout';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import NotFound from './pages/NotFound';
 import Details from './pages/Details'
+import EditCity from './components/EditCity/EditCity';
+
 
 
 function App() {
@@ -17,9 +19,10 @@ function App() {
         <Layout>
           <Routes>
             <Route path='/' element={<Index/>}/>
-            <Route path='/Cities' element={<CityPage/>}/>
-            <Route path='/NewCity' element={<NewCityPage/>}/>
-            <Route path='/Cities/:id' element={<Details/>}/>
+            <Route path='/cities' element={<CityPage/>}/>
+            <Route path='/newCity' element={<NewCityPage/>}/>
+            <Route path='/cities/:id' element={<Details/>}/>
+            <Route path='/edit-City' element={<EditCity/>}/>
            <Route path='*' element={<NotFound/>}/>
           </Routes>
         </Layout>

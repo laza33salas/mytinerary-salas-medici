@@ -25,3 +25,4 @@ yarn-error.log*
 config/Passport.js
 
 # /frontend/node_modules
+node_modules

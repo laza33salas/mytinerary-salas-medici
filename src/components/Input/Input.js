@@ -1,24 +1,38 @@
-import {useState,useRef, useEffect} from 'react'
+import {useRef} from 'react'
 import "./Input.css"
 
 
 const Input = (props) => {
-//Setear los hooks useState
 
-const [inputValue, setinputValue] = useState("")  
-const previousinputValue = useRef("")
+const readArray = props.inputData
 
-//Capturar input
-useEffect(() => {
-previousinputValue.current = inputValue;
-}, [inputValue])
+
+const inputForm = useRef()
+  const sendValue = (e) =>{
+    e.preventDefault()
+    props.event(Array.from(inputForm.current), e)
+
+    inputForm.current.reset()
+  }
+
+
+  const createInputsForm = (item) =>{
+    return (
+      <div >
+        <h4>{item.name}</h4>
+        <input className='input-style' name={item.name} type={item.type} defaultValue={item.value} placeholder={item.placeholder}/>
+      </div>
+    )
+  }
 
   return (
+
     <div className='form-container'>
-      <form >
+      <form ref={inputForm} onSubmit={sendValue} id="form-new-city">
         <legend className="legendInput">{props.dato}</legend>
-        <input className='input-style' type="text" placeholder={props.placeholder} value={inputValue} onChange={(e) => setinputValue(e.target.value)}/>    
-      {console.log(inputValue)}
+        {props.children}       
+        {readArray.map(createInputsForm)}
+        <button className="botonNC" type='submit'>Send</button>
       </form>
     
     </div>
