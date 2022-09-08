@@ -29,7 +29,7 @@ useEffect(() => {
                 <h3 className="itinerary-card-tittle-back"></h3>
                 <p className='itinerary-card-p-back'>{item.description}</p>
             </div>
-
+            <Activities dato={item._id}/>
         </div>
     )
 
@@ -39,8 +39,8 @@ useEffect(() => {
             <h2 className='tittle-itinerary'>Itinerary of </h2>
             <div className='citiesCard-container'>
                 {itinerarios?.map(cardItinerary)}
+        
             </div>
-        <Activities/>
             
         </div>
     )

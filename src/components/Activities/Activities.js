@@ -3,17 +3,17 @@ import React from 'react'
 
 import {useState,useEffect} from "react"
 import { useParams } from 'react-router-dom'
-const Activities = () => {
+const Activities = (props) => {
 
 
 const [activities, setActivities]= useState([])
 
-const { id } = useParams()
+
 
 
 useEffect(() => {
-    axios.get(`http://localhost:4000/activities/?itinerary=${id}`)
-        .then(response => console.log(response.data.response))
+    axios.get(`http://localhost:4000/activities/?itinerary=${props.dato}`)
+        .then(response => setActivities(response.data.response))
 
 }, [])
     
