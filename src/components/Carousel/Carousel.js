@@ -10,8 +10,8 @@ function Carousel (props){
   const [end, setEnd] = useState(start + range)
   const [intervalId, setintervalId] = useState()
   const cities = props.data
-  
-  
+
+
 
  const cardCarousel = (data) => (
   <div className="carousel-container">
