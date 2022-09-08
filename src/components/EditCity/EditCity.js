@@ -7,8 +7,7 @@ import {useGetAllCitiesQuery} from "../../features/citiesApi"
 
 const EditCity = () => {
 
-    const va
-    = useRef() 
+    const valueCity = useRef() 
   
         const {
          
