@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Comments.css"
+import axios from 'axios'
 
 const Comments = () => {
+    const [comments, setComments] = useState([])
     const [open, setOpen] = useState(false)
     const handleOpenMenu = () =>{
         if (open) {
@@ -11,6 +13,19 @@ const Comments = () => {
         }
     }
 
+
+    useEffect( ()=> { 
+      axios.get('http://localhost:4000/comments')
+      .then( response => setComments(response.data.response))
+    }, [])
+
+
+    const commentCard = (item) => (
+      <div> 
+        <p>{item.comment}</p>
+      </div>
+    )
+
   return (
     <div className='commentsContainer'>
         <button class="commentBTN" onClick={handleOpenMenu}>
@@ -18,7 +33,7 @@ const Comments = () => {
         </button>
         <div className='commentOn'>
             {open
-            ? <p>Mapear Comentarios</p>
+            ? comments?.map(commentCard)
             : null
             }
         </div>

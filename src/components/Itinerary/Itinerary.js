@@ -4,6 +4,8 @@ import './Itinerary.css'
 import {useState,useEffect} from "react"
 import { useParams } from 'react-router-dom'
 import Activities from '../Activities/Activities'
+import Comments from '../Comments/Comments'
+
 const Itinerary = () => {
 
 
@@ -41,7 +43,7 @@ useEffect(() => {
                 {itinerarios?.map(cardItinerary)}
         
             </div>
-            
+            <Comments/>
         </div>
     )
 
