@@ -18,30 +18,23 @@ const CardDetails = () => {
 
 
     return (
-        
+
         <div className='CardDetails-container'>
+
             <h2 className='h2-details'>More Info {city.city}</h2>
-            <div className="carousel-container">
-                <div className="carousel-card">
-                    <LinkRouter to={`/Cities/${city._id}`}>
-                        <img className="carousel-imagen" src={city.photo} alt="" />
-                    </LinkRouter>
-                    <h3 className="carousel-card-tittle">{city.city} </h3>
+
+                <LinkRouter to={`/Cities/${city._id}`}>
+                    <div className='image-detail-container'>
+                        <img className="detail-image" src={city.photo} alt="" />
+                    </div>
+                </LinkRouter>
+                <h3 className="carousel-card-tittle">{city.city} </h3>
+                <p className='p-detail'> Population: {city.population}</p>
+                <p className='p-detail'> foundation: {city.foundation}</p>
+                <p className='p-detail city-description'>{city.description}</p>
+                <div className='botonNC'>
+                    <LinkRouter className="back" to="/Cities">Back</LinkRouter>
                 </div>
-            </div>
-
-<div className='descripcion-details'>
-            <p> Population: {city.population}</p>
-            <p> foundation: {city.foundation}</p>
-            <p>{city.description}</p>
-            <LinkRouter className='botonNC' to="/Cities">Back</LinkRouter>
-</div>
-
-         
-         
-
-
-
         </div>
 
     )
