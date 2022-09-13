@@ -1,20 +1,18 @@
-import { useEffect, useRef } from 'react'
+import React from 'react'
 import * as jose from 'jose'
+import { useEffect, useRef } from 'react'
 
-function  signUpGoogle  () {
+export default function SignUpGoogle() {
 
-    let [newUser, response] = useSignUpUserMutation();
-
+    const buttonDiv = useRef(null)
     console.log(buttonDiv.current)
-    
+
     async function handleCredentialResponse(response) {
-        const buttonDiv = useRef(null)
-    }
 
         let userObject = jose.decodeJwt(response.credential)
         console.log(userObject)
 
-        let data = {
+        let data = { 
             name: userObject.name,
             lastName: userObject.lastName,
             password :userObject.password,
@@ -23,8 +21,7 @@ function  signUpGoogle  () {
             role: "user",
             from: "google"
         }
-        //newUser(data)
-    
+    }
 
     useEffect(() => {
         /* global google */
@@ -32,12 +29,12 @@ function  signUpGoogle  () {
             client_id: '1062611731509-vvbj662ou1mppvj3pffkt4gomoj1fs9n.apps.googleusercontent.com',
             callback: handleCredentialResponse,
             context: 'signup'
-        });
+          });
 
-        google.accounts.id.renderButton(
+          google.accounts.id.renderButton(
             buttonDiv.current,
-            { theme: "outline", size: "medium", text: 'signup_with' }
-        );
+            { theme: "outline", size: "medium", text: 'signup_with' }  
+          );
     }, [])
 
   return (
@@ -46,5 +43,3 @@ function  signUpGoogle  () {
     </div>
   )
 }
-
-export default signUpGoogle
