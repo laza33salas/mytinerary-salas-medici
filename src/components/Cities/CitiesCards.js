@@ -46,7 +46,7 @@ const CitiesCards = () => {
     <div>
       <div className="searchContainer">
       
-      <input type="text" ref={search} onChange={changeValue}></input>
+      <input className="cities-filter" type="text" ref={search} onChange={changeValue} placeholder="Search"></input>
       </div>
 
       <div className='citiesCard-container'>
