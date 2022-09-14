@@ -8,7 +8,7 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import NotFound from './pages/NotFound';
 import Details from './pages/Details'
 import EditCity from './components/EditCity/EditCity';
-
+import SignUp from './pages/signUp';
 
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path='/' element={<Index/>}/>
+            <Route path='/auth/signup' element={<SignUp/>}/>
             <Route path='/cities' element={<CityPage/>}/>
             <Route path='/newCity' element={<NewCityPage/>}/>
             <Route path='/cities/:id' element={<Details/>}/>
