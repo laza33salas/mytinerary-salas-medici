@@ -5,6 +5,7 @@ import "./SignUp.css"
 export default function SignUp() {
   return (
     <div className='sign-up-page'>
+      <h1 className='sign-up-title'>Sign Up</h1>
         <p className='p-detail'>Sign Up with:</p>
         <form action="">
             <input type="text" />
