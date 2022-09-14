@@ -1,0 +1,9 @@
+.sign-up-page{
+    background-color: wheat;
+    min-height: 49vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
