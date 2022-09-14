@@ -17,15 +17,15 @@ const linkNav = (item) =>
       
 
           <LinkRouter className="links" to={item.to}>
-          {<p> {item.name}</p>}
+          {<p className="footer-links-nav"> {item.name}</p>}
         </LinkRouter>
       
     
     
     return (
-   <div className="footer-links-nav">
+   <>
        {navegacion.map(linkNav)}
-   </div>
+   </>
     
   )
 }
