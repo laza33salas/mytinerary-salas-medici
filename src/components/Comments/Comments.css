@@ -1,0 +1,17 @@
+.commentsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.commentOn{
+    text-align: center;
+}
+
+.commentBTN{
+    font-family: fantasy;
+    width: 150px;
+    background-color: rgb(218,83,9);
+    border-radius: 5px;
+    border: 1px solid black;
+}
