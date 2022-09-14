@@ -19,39 +19,35 @@ useEffect(() => {
         .then(response => setItinerarios(response.data.response))
 
 }, [])
+
     const cardItinerary = (item) => (
-        <div className="itinerary-card">
+        <div className="itinerary-data">
+            <div className=''>
+                <h3 className='card-tittle-front'>{item.name}</h3>
+                <h3 className='card-tittle-front'>Price: ${item.price}</h3>
+                <h3 className='card-tittle-front'>❤{item.likes}</h3>
+                <h3 className='card-tittle-front'>{item.tags}</h3>
+                <h3 className='card-tittle-front'>Duration: {item.duration}</h3>
+                
 
-            <div className='face front'>
-                <img className="itinerary-card-imagen-front" src={item.photo} alt="" />
-                <h3 className='card-tittle-front'> {item.name}</h3>
+                <Activities dato={item._id}/>
             </div>
-
-            <div className='face back'>
-                <h3 className="itinerary-card-tittle-back"></h3>
-                <p className='itinerary-card-p-back'>{item.description}</p>
-            </div>
-            <Activities dato={item._id}/>
         </div>
     )
 
 
     return (
         <div>
-            <h2 className='tittle-itinerary'>Itinerary of </h2>
-            <div className='citiesCard-container'>
-                {itinerarios?.map(cardItinerary)}
-        
+            <div>
+            <h2 className='tittle-itinerary'>Itinerary</h2>
+                <div className=''>
+                    {itinerarios?.map(cardItinerary)}  
+                </div>  
             </div>
+
             <Comments/>
-        </div>
+    </div>
     )
-
-
-
-
-
-
 }
 
 export default Itinerary
