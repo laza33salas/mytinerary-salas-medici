@@ -2,16 +2,42 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: wheat;
 }
 
 .commentOn{
     text-align: center;
+    width: 80%;
 }
 
 .commentBTN{
     font-family: fantasy;
+    height: 30px;
     width: 150px;
-    background-color: rgb(218,83,9);
+    background-color: rgba(218, 82, 9, 0.808);
     border-radius: 5px;
     border: 1px solid black;
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+
+.comment-user-pic{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.comment-profile-container{
+  background-color: rgba(223, 147, 96, 0.616);
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0px 0px 15px 0px;
+  border: 1px solid black;
+  box-shadow: 0 5px 10px black;
+}
+
+.pic-and-name{
+    width: 140px;
+    margin-right: 10px;
 }
