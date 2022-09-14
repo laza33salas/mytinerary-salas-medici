@@ -22,10 +22,9 @@
 }
 .container-footerNav{
     display: flex;
-    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
     font-family: 'Varela Round', sans-serif;
-
-    
 }
 
 .container-sociales{
@@ -68,6 +67,8 @@
         margin-right: 30px;
        }
 }
+
+
 
 
 
