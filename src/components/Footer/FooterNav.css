@@ -1,5 +1,5 @@
 .footer-links-nav{
-width: 250px;
+width: 80vh;
 
 display: flex;
 justify-content: space-around;
@@ -9,3 +9,8 @@ justify-content: space-around;
     color: black;
 }
 
+@media(max-width: 425px){
+    .footer-links-nav{
+        width: 58vh;
+    }
+}
