@@ -17,7 +17,7 @@ const linkNav = (item) =>
       
 
           <LinkRouter className="links" to={item.to}>
-          {<p className="footer-links-nav"> {item.name}</p>}
+          {<p> {item.name}</p>}
         </LinkRouter>
       
     
