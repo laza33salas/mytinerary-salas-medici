@@ -30,7 +30,7 @@ const Comments = () => {
       </div>
       <div className='comment-container'>
         <p>{item.comment}</p>
-      </div>
+      </div> 
     </div>
   )
 
