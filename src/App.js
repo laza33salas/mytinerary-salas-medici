@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound';
 import Details from './pages/Details'
 import EditCity from './components/EditCity/EditCity';
 import SignUp from './pages/SignUp'
+import SignIn from './pages/SignIn'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path='/' element={<Index/>}/>
+            <Route path='/auth/signin' element={<SignIn/>}/>
             <Route path='/auth/signup' element={<SignUp/>}/>
             <Route path='/cities' element={<CityPage/>}/>
             <Route path='/newCity' element={<NewCityPage/>}/>
