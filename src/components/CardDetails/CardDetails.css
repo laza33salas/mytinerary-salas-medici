@@ -57,7 +57,7 @@ margin-left: 25px;
  }
 
  .detail-image{
-    min-width: 100vh;
+    min-width: 100%;
     height: 40vh;
     object-fit: cover;
     box-shadow: 0 5px 10px black;
@@ -85,7 +85,7 @@ margin-left: 25px;
 
  @media(max-width: 425px){
     .detail-image{
-        min-width: 30vh;
+       
         height: 30vh;
      }
 }

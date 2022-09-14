@@ -17,7 +17,9 @@
     background: rgb(218,83,9);
     background: linear-gradient(295deg, rgba(218,83,9,0.8422273781902552) 16%, rgba(240,121,5,1) 43%, rgba(238,144,12,1) 67%, rgba(246,173,52,1) 84%);
 }
-
+.footer-links-nav{
+    display: flex;
+}
 .container-footerNav{
     display: flex;
     flex-direction: row;

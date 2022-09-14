@@ -1,21 +1,20 @@
-.itineraryCard-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-     width: 100%;
-     
- }
+.container-itineraries{
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+}
  .tittle-itinerary{
     text-align: center;
     font-family: fantasy;
+    font-size: 30px;
  }
- .itinerary-card{
- position: relative;
- width: 290px;
- height: 320px;
- margin: 15px;
+
+ .itinerary-data{
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+
  }
+
  
  
 

@@ -1,8 +1,9 @@
 .footer-links-nav{
-width: 80vh;
+
 
 display: flex;
 justify-content: space-around;
+
 }
 .links{
     text-decoration: none;
@@ -11,6 +12,6 @@ justify-content: space-around;
 
 @media(max-width: 425px){
     .footer-links-nav{
-        width: 58vh;
+        
     }
 }
