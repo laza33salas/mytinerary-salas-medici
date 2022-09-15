@@ -11,15 +11,7 @@ const EditCity = () => {
   
         const {
          
-          data: cities ,
- 
-          error,
-      
-          isLoading,
-     
-          isSuccess,
-        
-          isFailed
+          data: cities
           
         } = useGetAllCitiesQuery("")
 
