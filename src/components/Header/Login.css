@@ -11,6 +11,13 @@
     background-color: wheat
 }
 
+.sig-nav-container{
+    position: absolute;
+    top: 15%;
+   left: 86%;  
+   z-index: 1;
+}
+
 @media(min-width: 768px){
     .logo{
         width: 40px!important;
@@ -19,5 +26,30 @@
     
     .parrafos{
         font-size: 15px;
+    }
+}
+
+@media(min-width: 1000px){
+    .sig-nav-container{
+       left: 88%;  
+    }
+}
+
+@media(max-width: 425px){
+    .sig-nav-container{
+        top: 10%;
+       left: 75%;  
+    }
+}
+
+@media(max-width: 375px){
+    .sig-nav-container{
+       left: 72%;  
+    }
+}
+
+@media(max-width: 320px){
+    .sig-nav-container{
+       left: 67%;  
     }
 }
