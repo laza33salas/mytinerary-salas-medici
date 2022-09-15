@@ -5,7 +5,7 @@ import "./SignUp.css"
 export default function SignIn() {
   return (
     <div className='sign-up-page'>
-        <h1 className='sign-up-title'>Sign Ip</h1>
+        <h1 className='sign-up-title'>Sign In</h1>
         <p className='p-detail'>Sign In with:</p>
         <form action="">
             <input type="text" />

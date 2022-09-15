@@ -97,9 +97,6 @@
   .btn:focus {
     outline: none;
   }
-  
-
-
 
 @media(min-width: 768px){
     .nav{
@@ -129,3 +126,4 @@
         font-size: 15px;
     }
 }
+
