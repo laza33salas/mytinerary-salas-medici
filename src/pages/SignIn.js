@@ -1,5 +1,5 @@
 import React from 'react'
-import SignUpGoogle from '../components/SignUpGoogle/SignUpGoogle'
+import SignInGoogle from '../components/SignInGoogle/SignInGoogle'
 import "./SignUp.css"
 
 export default function SignIn() {
@@ -11,7 +11,7 @@ export default function SignIn() {
             <input type="text" />
         </form>
         <p className='p-detail'>Or sign In with:</p>
-        <SignUpGoogle/>
+       <SignInGoogle/>
     </div>
   )
 }
