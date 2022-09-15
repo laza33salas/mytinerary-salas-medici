@@ -5,7 +5,7 @@ import "./SignUp.css"
 
 export default function SignIn() {
 
-  const inputEditCity = [
+  const inputSignIn = [
     {type: "text",
     value: "",
     placeholder: "Name"},
@@ -28,7 +28,7 @@ export default function SignIn() {
     <div className='sign-up-page'>
         <h1 className='sign-up-title'>Sign In</h1>
         <p className='p-detail'>Sign In with:</p>
-        <InputGeneric inputData={inputEditCity}></InputGeneric>
+        <InputGeneric inputData={inputSignIn}></InputGeneric>
         <p className='p-detail'>Or sign In with:</p>
        <SignInGoogle/>
     </div>
