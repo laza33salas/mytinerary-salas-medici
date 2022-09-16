@@ -32,7 +32,7 @@ const inputForm = useRef()
         <legend className="legendInput">{props.dato}</legend>
         {props.children}       
         {readArray.map(createInputsForm)}
-        <button className="botonNC" type='submit'>Send</button>
+        <button className="botonNC" type='submit' >Send</button>
       </form>
     
     </div>
