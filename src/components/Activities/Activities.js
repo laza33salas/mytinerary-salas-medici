@@ -20,8 +20,8 @@ useEffect(() => {
     const cardsActivities = (item) => (
         <div className="">
             <div className=''>
-                <img className="" src={item.photo} alt="" />
                 <h3 className=''>{item.name} </h3>
+                <img className="" src={item.photo} alt="" />
             </div>
 
         </div>
@@ -30,6 +30,7 @@ useEffect(() => {
     return (
         <div>
             <h2 className='tittle-itinerary'>Activities</h2>
+          
             <div className='citiesCard-container'>
                 {activities?.map(cardsActivities)}
             
