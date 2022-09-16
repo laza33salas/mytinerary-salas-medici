@@ -12,7 +12,7 @@ export default function SignUpGoogle() {
     async function handleCredentialResponse(response) {
 
         let userObject = jose.decodeJwt(response.credential)
-      console.log(userObject)
+     
         let data = { 
             name: userObject.given_name,
             lastName: userObject.family_name,
@@ -23,7 +23,7 @@ export default function SignUpGoogle() {
             role: "user",
             from: "google"
         }
-        console.log(data)
+       
         try{
           await axios.post('http://localhost:4000/users/signup', data)
         }catch(error){
