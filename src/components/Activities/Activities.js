@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React from 'react'
-
+import './Activities.css'
 import {useState,useEffect} from "react"
 
 const Activities = (props) => {
@@ -19,9 +19,11 @@ useEffect(() => {
     
     const cardsActivities = (item) => (
         <div className="">
-            <div className=''>
-                <h3 className=''>{item.name} </h3>
-                <img className="" src={item.photo} alt="" />
+            <div className='container-activity'>
+                <h3 className='tittle-activity'>{item.name} </h3>
+                <div className='image-detail-container-activity'>
+                <img className="img-activity" src={item.photo} alt="" />
+            </div>
             </div>
 
         </div>
