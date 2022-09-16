@@ -24,11 +24,11 @@ useEffect(() => {
         <div className='container-itineraries'>
             <h2 className='tittle-itinerary'>Itinerary</h2>
             <div className='itinerary-data'>
-                <h4 className='card-tittle-front'>{item.name}</h4>
-                <p className='card-tittle-front'>Price: ${item.price}</p>
-                <p className='card-tittle-front'>❤{item.likes}</p>
-                <p className='card-tittle-front'>{item.tags}</p>
-                <p className='card-tittle-front'>Duration: {item.duration}</p>
+                <h4 className=''>{item.name}</h4>
+                <p className=''>Price: ${item.price}</p>
+                <p className=''>❤{item.likes}</p>
+                <p className=''>{item.tags}</p>
+                <p className=''>Duration: {item.duration}</p>
                 <Activities dato={item._id}/>
             </div>
         </div>
@@ -36,13 +36,10 @@ useEffect(() => {
 
 
     return (
-        <div>
-            <div>
-            
+    <div>
                 <div className=''>
                     {itinerarios?.map(cardItinerary)}  
                 </div>  
-            </div>
 
             <Comments/>
     </div>
