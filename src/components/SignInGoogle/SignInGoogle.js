@@ -1,26 +1,34 @@
 import React from 'react'
 import * as jose from 'jose'
 import { useEffect, useRef } from 'react'
-
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 export default function SignInGoogle() {
 
     const buttonDiv = useRef(null)
-
+    const navigate = useNavigate()
 
     async function handleCredentialResponse(response) {
 
         let userObject = jose.decodeJwt(response.credential)
-        console.log(userObject)
+        
 
         let data = { 
-            name: userObject.name,
-            lastName: userObject.lastName,
-            password :userObject.password,
-            photo: userObject.photo,
-            country: userObject.country,
-            role: "user",
+           
+            mail: userObject.email,
+            password: userObject.sub,
             from: "google"
         }
+
+        try {
+            let response = await axios.post('http://localhost:4000/users/signin',data)
+            console.log(response)
+            localStorage.setItem('user',JSON.stringify(response.data.response.user))
+            navigate("/",{replace:true}) //redirigí al index
+          } catch(error) {
+            console.log(error)
+          }        
+    
     }
 
     useEffect(() => {
