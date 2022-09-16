@@ -1,5 +1,6 @@
 import {useRef} from 'react'
 import "./Input.css"
+import Alert from "../Alert/Alert"
 
 
 const Input = (props) => {
@@ -30,11 +31,11 @@ const inputForm = useRef()
     <div className='form-container'>
       <form ref={inputForm} onSubmit={sendValue} id="form-new-city">
         <legend className="legendInput">{props.dato}</legend>
-        {props.children}       
+        {props.children}
         {readArray.map(createInputsForm)}
-        <button className="botonNC" type='submit'>Send</button>
+        <Alert classNamee="botonNC" message={props.message}></Alert>
       </form>
-    
+
     </div>
   )
 }

@@ -1,11 +1,14 @@
 import React from 'react'
 import "./EditCity.css"
 import Input from "../Input/Input"
-import {useRef, useState} from 'react'
+import {useRef, useState,useEffect} from 'react'
 import axios from 'axios'
 import {useGetAllCitiesQuery} from "../../features/citiesApi"
-
+import Alert from '../Alert/Alert'
 const EditCity = () => {
+  
+  
+
 
     const valueCity = useRef() 
   
@@ -79,12 +82,14 @@ const EditCity = () => {
   function changeValue(){
         setValue(valueCity.current.value)
   }
-
+ 
+  
   return (
     <div className='inputContainer'>
       <h1 className="titleInputs">Edit City</h1>
       <select className='select-edit-city' onChange={changeValue} ref={valueCity}>{cities?.response.map(viewOptions)}</select>
-      <Input inputData={inputEditCity} event={(arrayData) =>modifyCity(arrayData)} ></Input>
+      <Input inputData={inputEditCity} event={(arrayData) =>modifyCity(arrayData)}  ></Input>
+      
     </div>
   )
 }

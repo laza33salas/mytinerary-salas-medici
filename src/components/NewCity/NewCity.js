@@ -65,7 +65,7 @@ const NewCity = () => {
   return (
     <div className='inputContainer'>
       <h1 className="titleInputs">Create New City</h1>
-      <Input className='inputs'inputData={inputNewCity} event={(arrayData) =>createCity(arrayData)} ></Input>
+      <Input classNamee='inputs'inputData={inputNewCity} event={(arrayData) =>createCity(arrayData)} message={"New Ciy Created"} ></Input>
     </div>
   )
 }
