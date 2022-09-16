@@ -1,25 +1,33 @@
 import React from 'react'
 import * as jose from 'jose'
 import { useEffect, useRef } from 'react'
+import axios from 'axios'
+
 
 export default function SignUpGoogle() {
 
     const buttonDiv = useRef(null)
-    console.log(buttonDiv.current)
+   
 
     async function handleCredentialResponse(response) {
 
         let userObject = jose.decodeJwt(response.credential)
-        console.log(userObject)
-
+      console.log(userObject)
         let data = { 
-            name: userObject.name,
-            lastName: userObject.lastName,
-            password :userObject.password,
-            photo: userObject.photo,
-            country: userObject.country,
+            name: userObject.given_name,
+            lastName: userObject.family_name,
+            password :userObject.sub,
+            mail: userObject.email,
+            country: "arg",
+            photo: userObject.picture,
             role: "user",
             from: "google"
+        }
+        console.log(data)
+        try{
+          await axios.post('http://localhost:4000/users/signup', data)
+        }catch(error){
+          console.log(error)
         }
     }
 
