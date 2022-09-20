@@ -1,5 +1,6 @@
 import React from 'react'
 import {useRef} from 'react'
+import Alert from '../Alert/Alert'
 
 const InputGeneric = (props) => {
 
@@ -15,8 +16,8 @@ const InputGeneric = (props) => {
 
     const createInputsForm = (item) =>{
         return (
-          <div >
-            <input className='generic-input' name={item.name} type={item.type} defaultValue={item.value} placeholder={item.placeholder}/>
+          <div>
+            <input className='generic-input' ref={props.ref} onChange={props.method} name={item.name} type={item.type} defaultValue={item.value} placeholder={item.placeholder}/>
           </div>
         )
       }
@@ -26,7 +27,7 @@ const InputGeneric = (props) => {
           <form ref={inputForm} onSubmit={sendValue} id="new-input">
             {props.children}       
             {readArray.map(createInputsForm)}
-            <button className="botonNC" type='submit'>Send</button>
+            <Alert classNamee="botonNC" message={props.message}></Alert>
           </form>
         
         </div>

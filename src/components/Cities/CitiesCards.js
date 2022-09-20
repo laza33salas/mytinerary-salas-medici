@@ -10,17 +10,17 @@ const CitiesCards = () => {
   const changeValue = () =>{
     setinputValue(search.current?.value)
   }
+  console.log(inputValue)
   const {
     //informacion que necesito usar, es el body
     data: cities ,
-    //
-    error,
+    //error,
     //Una propiedad que me indica si se esta cargando ese dato
-    isLoading,
+    //isLoading,
     //Una propiedad que me indica si se completo la carga con exito
-    isSuccess,
+    //isSuccess,
     //Una propiedad en caso de que haya fallado
-    isFailed
+    //isFailed
     
   } = useGetAllCitiesQuery(inputValue)
 
