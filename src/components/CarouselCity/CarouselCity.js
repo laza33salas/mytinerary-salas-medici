@@ -2,7 +2,7 @@ import Carousel from "../Carousel/Carousel"
 import "./CarouselCity.css"
 import PopularCities from "./PopularCities"
 import {useState} from "react"
-import { useGetAllCitiesQuery } from "../../features/citiesApi"
+import { useGetAllCitiesQuery } from "../../features/actions/citiesApi"
 
 
 function CarouselCity() {

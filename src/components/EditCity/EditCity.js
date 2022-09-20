@@ -3,13 +3,10 @@ import "./EditCity.css"
 import Input from "../Input/Input"
 import {useRef, useState,useEffect} from 'react'
 import axios from 'axios'
-import {useGetAllCitiesQuery} from "../../features/citiesApi"
+import {useGetAllCitiesQuery} from "../../features/actions/citiesApi"
 import Alert from '../Alert/Alert'
 const EditCity = () => {
   
-  
-
-
     const valueCity = useRef() 
   
         const {

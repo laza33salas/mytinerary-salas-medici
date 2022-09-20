@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link as LinkRouter } from 'react-router-dom'
-import { useUserSignOutMutation } from '../../features/usersApi'
+import { useUserSignOutMutation } from '../../features/actions/usersApi'
 import './SignNav.css'
 
 const SignNav = () => {

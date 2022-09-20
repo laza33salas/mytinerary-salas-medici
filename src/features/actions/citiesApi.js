@@ -14,8 +14,11 @@ const citiesApi = createApi({
     endpoints: (builder) =>({
         getAllCities: builder.query({
             query: (search) => `/cities/?city=${search}`
+        }),
+
         })
-        })
+
+        
     })
 
     export default citiesApi
