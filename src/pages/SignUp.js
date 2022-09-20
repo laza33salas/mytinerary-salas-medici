@@ -1,5 +1,4 @@
 import React from 'react'
-import InputGeneric from '../components/Input/InputGeneric'
 import SignUpForm from '../components/SignUpForm/SignUpForm'
 import SignUpGoogle from '../components/SignUpGoogle/SignUpGoogle'
 import "./SignUp.css"
