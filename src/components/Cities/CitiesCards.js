@@ -1,6 +1,6 @@
 import "./CitiesCards.css"
 import { Link as LinkRouter } from "react-router-dom"
-import { useGetAllCitiesQuery } from "../../features/citiesApi"
+import { useGetAllCitiesQuery } from "../../features/actions/citiesApi"
 import {useState,useRef} from 'react'
 
 
