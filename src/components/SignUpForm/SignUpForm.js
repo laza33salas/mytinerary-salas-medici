@@ -25,17 +25,17 @@ export default function SignUpForm() {
       from: 'form',
       role: "user"
     }
+    console.log(data)
     try {
-      await axios.post('http://localhost:4000/users/signup', data)
+      await axios?.post('http://localhost:4000/users/signup', data)
     } catch (error) {
       console.log(error)
     }
-    console.log(data) //borrar
   }
 
 
   return (
-    <form onChange={changeValue} className="user-form">
+    <form onSubmit={changeValue} className="user-form">
 
       <div>
         <label htmlFor='name'> </label>
