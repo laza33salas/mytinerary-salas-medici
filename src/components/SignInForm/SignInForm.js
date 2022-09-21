@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Alert from '../Alert/Alert'
-import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useUserSignInMutation } from '../../features/actions/usersApi'
+import {getUser} from '../../features/User/userSlice'
+import { useDispatch } from 'react-redux'
  
 export default function SignInForm() {
 
@@ -12,6 +13,10 @@ export default function SignInForm() {
   const [pass, setPass] = useState("")
   const navigate = useNavigate()
 
+  const dispatch = useDispatch()
+
+
+
    function changeValue(event) {
     event.preventDefault();
 
@@ -20,21 +25,13 @@ export default function SignInForm() {
       password: pass,
       from: 'form'
     }
-    console.log(dataUser)
-    //try {
-      //let response = await axios.post('http://localhost:4000/users/signin',data)
-     // console.log(response)
       userSignIn(dataUser)
-     // localStorage.setItem('token',JSON.stringify(response.data.response.token))
-     // navigate("/",{replace:true})
-   // } catch (error) {
-   //   console.log(error)
-   // }
   }
 
   useEffect(() => {
     if(data){  
       localStorage.setItem('token',JSON.stringify(data.response.token))
+      dispatch(getUser(data.response.user))//guarda en el store del redux
       navigate("/",{replace:true})
     }
   }, [data])  
