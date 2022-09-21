@@ -10,7 +10,7 @@ import Details from './pages/Details'
 import EditCity from './components/EditCity/EditCity';
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
-import MyItinerary from './components/MyItineray/MyItinerary';
+import MyItinerary from "./pages/MyItinerary";
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
             <Route path='/cities' element={<CityPage/>}/>
             <Route path='/newCity' element={<NewCityPage/>}/>
             <Route path='/cities/:id' element={<Details/>}/>
-            <Route path='/itineraries?users=id' element={<MyItinerary/>}/>
+            <Route path='/myTineraries' element={<MyItinerary/>}/>
             <Route path='/edit-City' element={<EditCity/>}/>
            <Route path='*' element={<NotFound/>}/>
           </Routes>
