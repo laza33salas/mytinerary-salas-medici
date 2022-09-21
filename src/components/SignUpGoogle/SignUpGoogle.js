@@ -8,7 +8,6 @@ export default function SignUpGoogle() {
 
     const buttonDiv = useRef(null)
    
-
     async function handleCredentialResponse(response) {
 
         let userObject = jose.decodeJwt(response.credential)

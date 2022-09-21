@@ -1,26 +1,43 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Alert from '../Alert/Alert'
 import axios from 'axios'
-
+import { useNavigate } from 'react-router-dom'
+import { useUserSignInMutation } from '../../features/actions/usersApi'
+ 
 export default function SignInForm() {
+
+  const [userSignIn, { data, error }] = useUserSignInMutation() 
 
   const [mail, setMail] = useState("")
   const [pass, setPass] = useState("")
+  const navigate = useNavigate()
 
-  async function changeValue(event) {
+   function changeValue(event) {
     event.preventDefault();
-    const data = {
+
+    const dataUser = {
       mail: mail,
       password: pass,
       from: 'form'
     }
-    console.log(data)
-    try {
-      await axios?.post('http://localhost:4000/users/signin', data)
-    } catch (error) {
-      console.log(error)
-    }
+    console.log(dataUser)
+    //try {
+      //let response = await axios.post('http://localhost:4000/users/signin',data)
+     // console.log(response)
+      userSignIn(dataUser)
+     // localStorage.setItem('token',JSON.stringify(response.data.response.token))
+     // navigate("/",{replace:true})
+   // } catch (error) {
+   //   console.log(error)
+   // }
   }
+
+  useEffect(() => {
+    if(data){  
+      localStorage.setItem('token',JSON.stringify(data.response.token))
+      navigate("/",{replace:true})
+    }
+  }, [data])  
 
 
   return (

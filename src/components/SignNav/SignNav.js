@@ -7,9 +7,9 @@ const SignNav = () => {
     const [userSignOut] = useUserSignOutMutation()
     let logged;
     const disconnect = () => { 
-        logged = JSON.parse(localStorage.getItem("user"))
+        logged = JSON.parse(localStorage.getItem("token"))
         userSignOut(logged)
-        localStorage.removeItem("user")
+        localStorage.removeItem("token")
         
     }
 
