@@ -8,7 +8,8 @@ const pages = [
   {name: "Home", to:"/", imagen:"https://cdn-icons-png.flaticon.com/512/2413/2413074.png", alt:"casa"},
   {name: "Cities", to:"/cities", imagen:"https://cdn-icons-png.flaticon.com/512/2222/2222208.png",alt:"cities"},
   {name: "New City", to:"/newcity", imagen:"https://cdn-icons-png.flaticon.com/512/2451/2451548.png", alt:"new-city"},
-  {name: "Edit City", to:"/edit-city", imagen:"https://cdn-icons-png.flaticon.com/512/2451/2451548.png", alt:"edit-city"}
+  {name: "Edit City", to:"/edit-city", imagen:"https://cdn-icons-png.flaticon.com/512/2451/2451548.png", alt:"edit-city"},
+ { name: "MyTinerary", to:"/myTineraries", imagen:"https://cdn-icons-png.flaticon.com/512/2451/2451548.png", alt:"MyTinerary"}
 ]
 
 const link = (page) =>
