@@ -16,17 +16,23 @@ const itiApi = createApi({
         }),
 
         //llamar en mytitneraries
-        getUsersItineruis: builder.query({
+        getUsersItineraries: builder.query({
             query: (id) => `itineraries/?users=${id}`,
             transformResponse: res => res.response
             
-        })
+        }),
+
+        deleteItinerary: builder.mutation({
+            query: (id) =>({
+                url: `/itineraries/${id}`,
+                method:'DELETE',
+                })
+            })
         }),
 
       
         
     })
     
-
 export default itiApi
-export const {useGetItinerariesQuery} = itiApi
+export const {useGetItinerariesQuery, useGetUsersItinerariesQuery, useDeleteItineraryMutation} = itiApi
