@@ -3,6 +3,7 @@
 // npm install @reduxjs/toolkit
 
 import { configureStore } from "@reduxjs/toolkit";
+import userSlice from './User/userSlice'
 
 
 
@@ -20,7 +21,11 @@ export default configureStore({
         [usersApi.reducerPath] : usersApi.reducer,
 
         itineraries : itiApi,
-        [itiApi.reducerPath] : itiApi.reducer
+        [itiApi.reducerPath] : itiApi.reducer,
+
+        //guardamos todos los datos del usuario en el store
+        user : userSlice,
+        
       
     },
 
