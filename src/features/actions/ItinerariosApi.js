@@ -17,9 +17,9 @@ const itiApi = createApi({
 
         //llamar en mytitneraries
         getUsersItineraries: builder.query({
-            query: (id) => `itineraries/?users=${id}`,
+
+            query: (id) => `itineraries/?user=${id?id:"Daleapruebaaa"}`,
             transformResponse: res => res.response
-            
         }),
 
         deleteItinerary: builder.mutation({
