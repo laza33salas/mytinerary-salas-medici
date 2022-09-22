@@ -3,8 +3,11 @@ import * as jose from 'jose'
 import { useEffect, useRef } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import {getUser} from '../../features/User/userSlice'
 export default function SignInGoogle() {
 
+   const dispatch = useDispatch()
     const buttonDiv = useRef(null)
     const navigate = useNavigate()
 
@@ -23,6 +26,7 @@ export default function SignInGoogle() {
             let response = await axios.post('http://localhost:4000/users/signin',data)
             console.log(response)
             localStorage.setItem('token',JSON.stringify(response.data.response.token))
+            dispatch(getUser(response.data.response.user))
             navigate("/",{replace:true}) //redirigí al index
           } catch(error) {
             console.log(error)

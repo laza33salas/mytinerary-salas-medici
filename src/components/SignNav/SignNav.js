@@ -45,7 +45,6 @@ const SignNav = () => {
 
     return (
         <div className='sign-nav'>
-            {console.log(log)}
             {open
                 ?  SignUpIn.map(logs)
                 :  LogOut
