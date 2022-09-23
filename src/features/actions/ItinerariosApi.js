@@ -27,7 +27,15 @@ const itiApi = createApi({
                 url: `/itineraries/${id}`,
                 method:'DELETE',
                 })
-            })
+            }),
+
+            likeDislike: builder.mutation({
+                query: (id) => ({
+                    url: '/itineraries/like/'+id,
+                    method: 'PUT',
+                    headers: {Authorization: `Bearer ${localStorage.getItem("token")}`}
+                })
+            }),
         }),
 
       
@@ -35,4 +43,4 @@ const itiApi = createApi({
     })
     
 export default itiApi
-export const {useGetItinerariesQuery, useGetUsersItinerariesQuery, useDeleteItineraryMutation} = itiApi
+export const {useGetItinerariesQuery, useGetUsersItinerariesQuery, useDeleteItineraryMutation, useLikeDislikeMutation} = itiApi
