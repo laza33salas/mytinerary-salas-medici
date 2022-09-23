@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from "react"
+import React, {useState } from "react"
 import './Likes.css'
 
+
 const Likes = (props) => {
+    let likes = props.likes
+    let id = props._id
+   
 
     const cantLikes = 0
     const fullHeart = "https://w7.pngwing.com/pngs/437/274/png-transparent-heart-red-heart.png"
