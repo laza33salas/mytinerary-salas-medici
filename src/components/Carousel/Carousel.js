@@ -14,9 +14,9 @@ function Carousel (props){
 
 
  const cardCarousel = (data) => (
-  <div className="carousel-container">
+  <div key={data._id} className="carousel-container">
     <div className="carousel-card">
-    <LinkRouter to={`/Cities/${data._id}`}>
+    <LinkRouter  to={`/Cities/${data._id}`}>
     <img  className="carousel-imagen" src={data.photo} alt="" />
     </LinkRouter>
       <h3 className="carousel-card-tittle">{data.city} </h3>

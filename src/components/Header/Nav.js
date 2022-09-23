@@ -54,9 +54,9 @@ const Nav = () => {
 
   return (
     <div className='nav'>
-      <button class="btn" onClick={handleOpenMenu}>
-        <span class="btn__visible">☰</span>
-        <span class="btn__invisible">Menu</span>
+      <button className="btn" onClick={handleOpenMenu}>
+        <span className="btn__visible">☰</span>
+        <span className="btn__invisible">Menu</span>
       </button>
       <div className='burgerOn'>
         {open
