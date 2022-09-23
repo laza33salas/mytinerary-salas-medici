@@ -16,7 +16,7 @@ const EditCity = () => {
         } = useGetAllCitiesQuery("")
 
 
-        const [value, setValue] = useState(cities?.response[0]._id)
+        const [value, setValue] = useState(cities?._id)
 
   const inputEditCity = [
    {name: "City", 
@@ -84,7 +84,7 @@ const EditCity = () => {
   return (
     <div className='inputContainer'>
       <h1 className="titleInputs">Edit City</h1>
-      <select className='select-edit-city' onChange={changeValue} ref={valueCity}>{cities?.response.map(viewOptions)}</select>
+      <select className='select-edit-city' onChange={changeValue} ref={valueCity}>{cities?.map(viewOptions)}</select>
       <Input inputData={inputEditCity} event={(arrayData) =>modifyCity(arrayData)}  ></Input>
       
     </div>
