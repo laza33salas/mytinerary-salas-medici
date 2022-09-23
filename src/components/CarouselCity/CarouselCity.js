@@ -28,7 +28,7 @@ function CarouselCity() {
 
       },[]) */
 
-  const citiesCarousel = cities?.response.slice(0, 12)
+  const citiesCarousel = cities?.slice(0, 12)
 
     return (
         <div className="container-carousel-city">
