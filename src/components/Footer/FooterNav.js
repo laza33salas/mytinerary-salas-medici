@@ -7,16 +7,16 @@ import React from 'react'
 const FooterNav = () => {
   
 const navegacion = [
-  {name: "Home", to:"/"},
-  {name: "Cities", to:"/cities"},
-  {name: "New City", to:"/newcity"},
-  {name: "Edit City", to:"/edit-city"}
+  {name: "Home", to:"/", alt:"homeFooter"},
+  {name: "Cities", to:"/cities", alt:"citiesFooter"},
+  {name: "New City", to:"/newcity", alt:"newCityFooter"},
+  {name: "Edit City", to:"/edit-city", alt:"editCityFooter"}
 ]
 
 const linkNav = (item) => 
       
 
-          <LinkRouter className="links" to={item.to}>
+          <LinkRouter className="links" to={item.to} key={item.alt}>
           {<p className="footer-link"> {item.name}</p>}
         </LinkRouter>
       

@@ -36,8 +36,8 @@ const Comments = () => {
 
   return (
     <div className='commentsContainer'>
-      <button class="commentBTN" onClick={handleOpenMenu}>
-        <span class="">Comments</span>
+      <button className="commentBTN" onClick={handleOpenMenu}>
+        <span className="">Comments</span>
       </button>
       <div className='commentOn'>
         {open
