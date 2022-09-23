@@ -13,7 +13,13 @@ const citiesApi = createApi({
 //Aca vamos a definir todos los endpoints
     endpoints: (builder) =>({
         getAllCities: builder.query({
-            query: (search) => `/cities/?city=${search}`
+            query: (search) => `/cities/?city=${search}`,
+            transformResponse: res => res.response
+        }),
+
+        getOneCity: builder.query({
+            query: (id)=>`/cities/${id}`,
+            transformResponse: res => res.response
         }),
 
         })
@@ -22,4 +28,4 @@ const citiesApi = createApi({
     })
 
     export default citiesApi
-    export const {useGetAllCitiesQuery} = citiesApi
+    export const {useGetAllCitiesQuery, useGetOneCityQuery} = citiesApi
