@@ -2,9 +2,13 @@ import React from 'react'
 import { useState } from 'react'
 import { Link as LinkRouter } from 'react-router-dom'
 import { useUserSignOutMutation } from '../../features/actions/usersApi'
+import { useDispatch } from 'react-redux'
+import {getUser} from '../../features/User/userSlice'
 import './SignNav.css'
 
 const SignNav = () => {
+    const dispatch = useDispatch()
+    
     const [userSignOut] = useUserSignOutMutation()
     let logged;
 
@@ -12,6 +16,7 @@ const SignNav = () => {
         logged = JSON.parse(localStorage.getItem("token"))
         userSignOut(logged)
         localStorage.removeItem("token")
+        dispatch(getUser({}))
     }
 
 
