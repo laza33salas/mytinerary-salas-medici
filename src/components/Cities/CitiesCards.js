@@ -10,7 +10,7 @@ const CitiesCards = () => {
   const changeValue = () =>{
     setinputValue(search.current?.value)
   }
-  console.log(inputValue)
+  
   const {
     //informacion que necesito usar, es el body
     data: cities ,
@@ -51,7 +51,7 @@ const CitiesCards = () => {
 
       <div className='citiesCard-container'>
     
-        {cities?.response.map(cards)}
+        {cities?.map(cards)}
       </div>
     </div>
   )
