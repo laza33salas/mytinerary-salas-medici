@@ -31,7 +31,7 @@ const Login = () => {
     useEffect(() => {
       setintervalId(() => {
         handleShowLogs()
-      }, 1000);
+      }, [intervalId]);
     });
 
 

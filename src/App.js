@@ -11,6 +11,7 @@ import EditCity from './components/EditCity/EditCity';
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
 import MyItinerary from "./pages/MyItinerary";
+import MyProfile from './pages/MyProfile';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path='/myTineraries' element={<MyItinerary/>}/>
             <Route path='/edit-City' element={<EditCity/>}/>
            <Route path='*' element={<NotFound/>}/>
+           {/* <Route path='/profile' element={<MyProfile/>}/> */}
           </Routes>
         </Layout>
       </BrowserRouter>
