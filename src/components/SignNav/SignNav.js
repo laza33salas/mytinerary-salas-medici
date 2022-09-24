@@ -34,7 +34,7 @@ const SignNav = () => {
         {
             className: 'sign-p top-sign',
             to: '/auth/signup',
-            content: 'SignUp'
+            content: 'SignUp',
         },
         {
             className: 'sign-p middle-sign',
@@ -44,7 +44,7 @@ const SignNav = () => {
     ]
 
     const logs = (item) => (
-        <LinkRouter onClick={handleShowLogs} className={item.className} to={item.to}><p>{item.content}</p></LinkRouter>
+        <LinkRouter key={item.content} onClick={handleShowLogs} className={item.className} to={item.to}><p>{item.content}</p></LinkRouter>
     )
     const LogOut = <button className='sign-p bot-sign' onClick={disconnect}><h3>LogOut</h3></button>
 
