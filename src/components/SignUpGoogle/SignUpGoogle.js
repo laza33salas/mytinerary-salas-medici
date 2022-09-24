@@ -2,10 +2,12 @@ import React from 'react'
 import * as jose from 'jose'
 import { useEffect, useRef } from 'react'
 import axios from 'axios'
+import { useSelector } from 'react-redux';
 
 
 export default function SignUpGoogle() {
 
+  const rolUser = useSelector(state => state.user.user.role)
     const buttonDiv = useRef(null)
    
     async function handleCredentialResponse(response) {
@@ -19,7 +21,7 @@ export default function SignUpGoogle() {
             mail: userObject.email,
             country: "arg",
             photo: userObject.picture,
-            role: "user",
+            role: rolUser == 'admin' ? "admin" : "user",
             from: "google"
         }
        

@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import Alert from '../Alert/Alert'
 import axios from 'axios'
+import { useSelector } from 'react-redux';
 import './SignUpForm.css'
 
 export default function SignUpForm() {
 
+  const rolUser = useSelector(state => state.user.user.role)
   const [name, setName] = useState("")
   const [lastName, setLastName] = useState("")
   const [mail, setMail] = useState("")
@@ -23,7 +25,7 @@ export default function SignUpForm() {
       photo: userPhoto,
       country: country,
       from: 'form',
-      role: "user"
+      role: rolUser == 'admin' ? "admin" : "user",
     }
     console.log(data)
     try {
