@@ -4,6 +4,7 @@ import { Link as LinkRouter } from 'react-router-dom'
 import { useUserSignOutMutation } from '../../features/actions/usersApi'
 import { useDispatch } from 'react-redux'
 import {getUser} from '../../features/User/userSlice'
+import { useSelector } from 'react-redux'
 import './SignNav.css'
 
 const SignNav = () => {
@@ -46,13 +47,20 @@ const SignNav = () => {
     const logs = (item) => (
         <LinkRouter key={item.content} onClick={handleShowLogs} className={item.className} to={item.to}><p>{item.content}</p></LinkRouter>
     )
-    const LogOut = <button className='sign-p bot-sign' onClick={disconnect}><h3>LogOut</h3></button>
 
+    const idUser = useSelector(state => state.user.user.id)
+    const profile = <LinkRouter className='sign-p top-sign' key="profile" onClick={handleShowLogs} to={`/profile/${idUser}`}><p>My Profile</p></LinkRouter>
+    const LogOut = <button className='sign-p bot-sign' onClick={disconnect}><h3>LogOut</h3></button>
+    const userLogged = <div>
+        {profile}
+        {LogOut}
+    </div>
+    
     return (
         <div className='sign-nav'>
             {open
                 ?  SignUpIn.map(logs)
-                :  LogOut
+                :  userLogged
             }
         </div>
     )
