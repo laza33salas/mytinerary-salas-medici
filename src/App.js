@@ -16,6 +16,7 @@ import { useSelector } from 'react-redux';
 
 function App() {
   const rolUser = useSelector(state => state.user.user.role)
+  
   return (
     <div className="App">
       <BrowserRouter>
@@ -28,7 +29,7 @@ function App() {
             <Route path='/cities' element={<CityPage />} />
             <Route path='/cities/:id' element={<Details />} />
             <Route path='/myTineraries' element={rolUser == null ? <SignUp /> : <MyItinerary />} />
-            <Route path='/profile' element={rolUser == null ? <SignUp /> : <MyProfile />} />
+            <Route path='/profile/:id' element={rolUser == null ? <SignUp /> : <MyProfile />} />
             <Route path='/newCity' element={rolUser === 'admin' ? <NewCityPage /> : <SignUp />} />
             <Route path='/edit-City' element={rolUser === 'admin' ? <EditCity /> : <SignUp />} />
             <Route path='*' element={<NotFound />} />

@@ -48,3 +48,7 @@
 .sign-p:hover{
     background-color: rgb(235, 183, 116);
 }
+
+.profile{
+    text-decoration: none;
+}

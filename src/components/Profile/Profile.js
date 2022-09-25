@@ -1,60 +1,39 @@
-// import React from 'react'
-// import "./EditCity.css"
-// import Input from "../Input/Input"
-// import {useState } from 'react'
-// import axios from 'axios'
-// import { useGetAllCitiesQuery } from "../../features/actions/citiesApi"
-// import { useSelector } from "react-redux";
-// const Profile = () => {
+import { Link as LinkRouter, useParams } from "react-router-dom"
+import { useGetOneUserQuery } from "../../features/actions/usersApi"
+import "./Profile.css"
 
-//   const {
+const Profile = () => {
 
-//     data: cities
+    const { id } = useParams()
+    const {
+        data: users,
+        isSuccess
 
-//   } = useGetAllCitiesQuery("")
+    } = useGetOneUserQuery(id)
 
-//   const rolUsuario = useSelector(state => state.user.user)
+    return (
 
+        <div className='profile-container'>
 
-//   const [value, setValue] = useState(cities?._id)
+                <h2 className='h2-details'>{users?.name} profile:</h2>
+            <div className="profile-container">
+                <div className="div-profile-pic">
+                    <p>Photo: <span> <img className="profile-imagen" src={users?.photo} alt="" /></span></p>
+                </div>
+                <div className="div-profile">
+                    <p>Name: {users?.name}</p>
+                </div>
+                <div className="div-profile">
+                    <p>Last Name: {users?.lastName}</p>
+                </div>
+                <div className="div-profile">
+                    <p>Country: {users?.country}</p>
+                </div>
+                <button>uwu</button>
+            </div>
+        </div>
 
-  
-//   const modifyCity = (arrayData) => {
-//     let formData = arrayData.filter(input => input.value && input.name)
+    )
+}
 
-//     console.log(formData)
-
-//     let data = formData.reduce((values, input) => {
-//       values[input.name.toLowerCase()] = input.value
-//       return values
-//     }, {})
-
-//     console.log(data)
-
-//     axios.put(`http://localhost:4000/cities/${value}`, data)
-//       .then(res => console.log(res))
-//       .catch(error => console.log(error))
-//   }
-
-//   function viewOptions(city) {
-//     return <option value={city._id}>{city.city}
-//     </option>
-//   }
-
-
-//   function changeValue() {
-//     setValue(valueCity.current.value)
-//   }
-
-
-//   return (
-//     <div className='inputContainer'>
-//       <h1 className="titleInputs">Edit City</h1>
-//       <select className='select-edit-city' onChange={changeValue} ref={valueCity}>{cities?.map(viewOptions)}</select>
-//       <Input inputData={inputEditCity} event={(arrayData) => modifyCity(arrayData)}  ></Input>
-
-//     </div>
-//   )
-// }
-
-// export default Profile
+export default Profile
