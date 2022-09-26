@@ -1,0 +1,14 @@
+.img-activity{
+    min-width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    box-shadow: 0 5px 10px black;
+}
+
+.image-detail-container-activity{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+   margin: 15px;
+}

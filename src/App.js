@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Index from "../src/pages/Index"
 import CityPage from './pages/CityPage';
 import NewCityPage from './pages/NewCityPage';
@@ -7,26 +7,35 @@ import Layout from './Layouts/WebSiteLayout';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import NotFound from './pages/NotFound';
 import Details from './pages/Details'
-
+import EditCity from './components/EditCity/EditCity';
+import SignUp from './pages/SignUp'
+import SignIn from './pages/SignIn'
+import MyItinerary from "./pages/MyItinerary";
+import MyProfile from './pages/MyProfile';
+import { useSelector } from 'react-redux';
 
 function App() {
+  const rolUser = useSelector(state => state.user.user.role)
   return (
     <div className="App">
       <BrowserRouter>
-      <ScrollToTop/>
+        <ScrollToTop />
         <Layout>
           <Routes>
-            <Route path='/' element={<Index/>}/>
-            <Route path='/Cities' element={<CityPage/>}/>
-            <Route path='/NewCity' element={<NewCityPage/>}/>
-            <Route path='/Cities/:id' element={<Details/>}/>
-           <Route path='*' element={<NotFound/>}/>
+            <Route path='/' element={<Index />} />
+            <Route path='/users/signin' element={<SignIn />} />
+            <Route path='/users/signup' element={<SignUp />} />
+            <Route path='/cities' element={<CityPage />} />
+            <Route path='/cities/:id' element={<Details />} />
+            <Route path='/myTineraries' element={rolUser == null ? <SignUp /> : <MyItinerary />} />
+            <Route path='/profile' element={rolUser == null ? <SignUp /> : <MyProfile />} />
+            <Route path='/newCity' element={rolUser === 'admin' ? <NewCityPage /> : <SignUp />} />
+            <Route path='/edit-City' element={rolUser === 'admin' ? <EditCity /> : <SignUp />} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </Layout>
       </BrowserRouter>
-    
     </div>
-    
   );
 }
 

@@ -7,24 +7,25 @@ import React from 'react'
 const FooterNav = () => {
   
 const navegacion = [
-  {name: "Home", to:"/"},
-  {name: "Cities", to:"/cities"},
-  {name: "New City", to:"/newcity"}
+  {name: "Home", to:"/", alt:"homeFooter"},
+  {name: "Cities", to:"/cities", alt:"citiesFooter"},
+  {name: "New City", to:"/newcity", alt:"newCityFooter"},
+  {name: "Edit City", to:"/edit-city", alt:"editCityFooter"}
 ]
 
 const linkNav = (item) => 
       
 
-          <LinkRouter className="links" to={item.to}>
-          {<p> {item.name}</p>}
+          <LinkRouter className="links" to={item.to} key={item.alt}>
+          {<p className="footer-link"> {item.name}</p>}
         </LinkRouter>
       
     
     
     return (
-   <div className="footer-links-nav">
+   <>
        {navegacion.map(linkNav)}
-   </div>
+   </>
     
   )
 }

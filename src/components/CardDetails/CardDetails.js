@@ -1,47 +1,42 @@
-import React, { useEffect, useState, } from 'react'
-import { useParams } from 'react-router-dom'
+
 import "./CardDetails.css"
-import { Link as LinkRouter } from "react-router-dom"
-import axios from "axios"
+import { Link as LinkRouter, useParams} from "react-router-dom"
+import MapView from '../MapView/MapView'
+import {useGetOneCityQuery} from '../../features/actions/citiesApi'
 
 const CardDetails = () => {
+    
+    const {id} = useParams()
+    const {
+       data: cities,
+       isSuccess
 
-    const [city, setCity] = useState([])
-    const { id } = useParams()
-
-
-    useEffect(() => {
-        axios.get(`http://localhost:4000/cities/${id}`)
-            .then(response => setCity(response.data.response))
-
-    }, [])
-
-
+    } = useGetOneCityQuery(id)
+    
     return (
-        
+
         <div className='CardDetails-container'>
-            <h2 className='h2-details'>More Info {city.city}</h2>
-            <div className="carousel-container">
-                <div className="carousel-card">
-                    <LinkRouter to={`/Cities/${city._id}`}>
-                        <img className="carousel-imagen" src={city.photo} alt="" />
-                    </LinkRouter>
-                    <h3 className="carousel-card-tittle">{city.city} </h3>
+
+            <h2 className='h2-details'>More Info {cities?.city}</h2>
+
+                <LinkRouter to={`/Cities/${cities?._id}`}>
+                    <div className='image-detail-container'>
+                        <img className="detail-image" src={cities?.photo} alt="" />
+                    </div>
+                </LinkRouter>
+                <h3 className="carousel-card-tittle">{cities?.city} </h3>
+                <p className='p-detail'> Population: {cities?.population}</p>
+                <p className='p-detail'> foundation: {cities?.foundation}</p>
+                <p className='p-detail city-description'>{cities?.description}</p>
+                <div className='botonNC'>
+                    <LinkRouter className="back" to="/Cities">Back</LinkRouter>
                 </div>
-            </div>
-
-<div className='descripcion-details'>
-            <p> Population: {city.population}</p>
-            <p> foundation: {city.foundation}</p>
-            <p>{city.description}</p>
-            <LinkRouter className='botonNC' to="/Cities">Back</LinkRouter>
-</div>
-
-         
-         
-
-
-
+                <div>
+                    {isSuccess?
+                    <MapView 
+                    city={cities}/>
+                    :null}
+                </div>
         </div>
 
     )

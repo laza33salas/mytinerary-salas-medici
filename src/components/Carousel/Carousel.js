@@ -10,13 +10,13 @@ function Carousel (props){
   const [end, setEnd] = useState(start + range)
   const [intervalId, setintervalId] = useState()
   const cities = props.data
-  
-  
+
+
 
  const cardCarousel = (data) => (
-  <div className="carousel-container">
+  <div key={data._id} className="carousel-container">
     <div className="carousel-card">
-    <LinkRouter to={`/Cities/${data._id}`}>
+    <LinkRouter  to={`/Cities/${data._id}`}>
     <img  className="carousel-imagen" src={data.photo} alt="" />
     </LinkRouter>
       <h3 className="carousel-card-tittle">{data.city} </h3>
@@ -44,7 +44,7 @@ function Carousel (props){
  }
 
  function next() {
-  if (end < cities.length){
+  if (end < cities?.length){
     setEnd(end + range)
     setStart(start + range)
   } else {
@@ -59,7 +59,7 @@ return (
   <div className="container-carousel">
       <Arrow icon={"◄ Back"} click={back}/>
     <div className="slide">
-      {cities.slice(start,end).map(cardCarousel)}
+      {cities?.slice(start,end).map(cardCarousel)}
     </div>
       <Arrow icon={"Next ►"} click={next}/>
   </div>

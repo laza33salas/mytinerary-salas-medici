@@ -1,21 +1,28 @@
-import React, { useEffect, useState,  } from 'react'
 import "./CitiesCards.css"
 import { Link as LinkRouter } from "react-router-dom"
-import Input from "../Input/Input"
-import axios from "axios"
+import { useGetAllCitiesQuery } from "../../features/actions/citiesApi"
+import {useState,useRef} from 'react'
 
 
 const CitiesCards = () => {
- 
-const [cities, setCities] = useState([])
-
-
-
-useEffect(()=>{
-  axios.get("http://localhost:4000/cities/")
-    .then(response => setCities(response.data.response))
+  const [inputValue, setinputValue] = useState("")  
+  const search = useRef()
+  const changeValue = () =>{
+    setinputValue(search.current?.value)
+  }
+  
+  const {
+    //informacion que necesito usar, es el body
+    data: cities ,
+    //error,
+    //Una propiedad que me indica si se esta cargando ese dato
+    //isLoading,
+    //Una propiedad que me indica si se completo la carga con exito
+    //isSuccess,
+    //Una propiedad en caso de que haya fallado
+    //isFailed
     
-},[])
+  } = useGetAllCitiesQuery(inputValue)
 
   const cards = (item) => (
     <div className="card">
@@ -33,17 +40,18 @@ useEffect(()=>{
       </div>
 
     </div>
-
   )
+
   return (
     <div>
       <div className="searchContainer">
-      <Input placeholder={"Search"}/>
+      
+      <input className="cities-filter" type="text" ref={search} onChange={changeValue} placeholder="Search"></input>
       </div>
 
       <div className='citiesCard-container'>
     
-        {cities.map(cards)}
+        {cities?.map(cards)}
       </div>
     </div>
   )

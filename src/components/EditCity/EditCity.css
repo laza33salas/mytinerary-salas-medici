@@ -1,0 +1,49 @@
+form{
+    margin: 10px;
+}
+
+.inputContainer{
+    background-color: wheat;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.titleInputs{
+    font-family: fantasy;
+    margin-bottom: 10px;
+    border-bottom: 3px solid black;
+}
+
+.botonNC{
+    background-color: rgb(253, 172, 106);
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 10px black;
+    text-decoration: none;
+    
+}
+
+.botonNC:hover{
+    background-color: rgb(255, 144, 53);
+}
+
+.select-edit-city{
+    align-self: center;
+    font-size: 15px;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: 'Varela Round', sans-serif;
+    margin: 20px;
+
+}

@@ -13,10 +13,9 @@ const Footer = () => {
       <div>
         <img className='marca' src="https://i.imgur.com/IBWun1O.png" alt="logo" />
         </div>
-        
-          <div className='ScrollButton'>
             <ScrollToTopPage/>
-          </div>
+        
+      
         
         <div className='container-footerNav'>
           <FooterNav/>

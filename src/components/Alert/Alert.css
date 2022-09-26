@@ -1,0 +1,7 @@
+.alertOn{
+    background-color: rgba(226, 147, 43, 0.678);
+    border: 2px solid black;
+    border-radius: 8px;
+    font-weight: bold;
+    z-index: 1;
+}

@@ -3,7 +3,7 @@ import NewCity from '../components/NewCity/NewCity'
 
 const NewCityPage = () => {
   return (
-    <div>
+    <div className='new-city-container'>
         <NewCity/>
     </div>
   )
