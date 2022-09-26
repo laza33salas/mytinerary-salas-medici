@@ -33,12 +33,12 @@ const SignNav = () => {
     const SignUpIn = [
         {
             className: 'sign-p top-sign',
-            to: '/auth/signup',
+            to: '/users/signup',
             content: 'SignUp'
         },
         {
             className: 'sign-p middle-sign',
-            to: '/auth/signin',
+            to: '/users/signin',
             content: 'SignIn'
         }
     ]
