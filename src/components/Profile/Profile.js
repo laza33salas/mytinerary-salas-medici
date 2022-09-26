@@ -29,7 +29,7 @@ const Profile = () => {
                 <div className="div-profile">
                     <p>Country: {users?.country}</p>
                 </div>
-                <button>uwu</button>
+                <LinkRouter userObject={users} className='botonNC BTNP' to={`/edit-Profile/${users?._id}`}>Edit Profile</LinkRouter> 
             </div>
         </div>
 
