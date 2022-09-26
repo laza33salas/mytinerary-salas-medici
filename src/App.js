@@ -25,8 +25,8 @@ function App() {
         <Layout>
           <Routes>
             <Route path='/' element={<Index />} />
-            <Route path='/auth/signin' element={<SignIn />} />
-            <Route path='/auth/signup' element={<SignUp />} />
+            <Route path='/users/signin' element={<SignIn />} />
+            <Route path='/users/signup' element={<SignUp />} />
             <Route path='/cities' element={<CityPage />} />
             <Route path='/cities/:id' element={<Details />} />
             <Route path='/myTineraries' element={rolUser == null ? <SignUp /> : <MyItinerary />} />
