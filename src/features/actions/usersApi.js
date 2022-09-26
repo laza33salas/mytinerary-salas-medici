@@ -35,10 +35,15 @@ const usersApi = createApi({
                 method: "POST",
                 body: user
             })
+        }),
+
+        getAllUsers: builder.query({
+            query: (search) => `/users/?user=${search}`,
+            transformResponse: res => res.response
         })
     })
 })
 
 
 export default usersApi
-export const { useUserSignUpMutation, useUserSignInMutation, useUserSignOutMutation, useGetOneUserQuery } = usersApi
+export const { useUserSignUpMutation, useUserSignInMutation, useUserSignOutMutation, useGetOneUserQuery, useGetAllUsersQuery} = usersApi
