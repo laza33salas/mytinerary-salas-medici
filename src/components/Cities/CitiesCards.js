@@ -25,7 +25,7 @@ const CitiesCards = () => {
   } = useGetAllCitiesQuery(inputValue)
 
   const cards = (item) => (
-    <div className="card">
+    <div className="card" key={item._id}>
       <div className='face front'>
         <img className="card-imagen-front" src={item.photo} alt="" />
         <h3 className='card-tittle-front'>{item.city} </h3>

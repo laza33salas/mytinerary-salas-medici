@@ -1,7 +1,6 @@
 
 import { useGetUsersItinerariesQuery} from "../features/actions/ItinerariosApi";
 import Itinerary from "../components/Itinerary/Itinerary"
-
 import { useSelector } from "react-redux";
 const MyTinerary = () => {
     
@@ -15,6 +14,7 @@ const MyTinerary = () => {
     
     return (
       <div>
+        
          <Itinerary itinerarios={itineraries}/>
         </div>
     )

@@ -13,9 +13,11 @@ import SignIn from './pages/SignIn'
 import MyItinerary from "./pages/MyItinerary";
 import MyProfile from './pages/MyProfile';
 import { useSelector } from 'react-redux';
+import EditProfile from './pages/EditProfile';
 
 function App() {
   const rolUser = useSelector(state => state.user.user.role)
+  
   return (
     <div className="App">
       <BrowserRouter>
@@ -28,9 +30,10 @@ function App() {
             <Route path='/cities' element={<CityPage />} />
             <Route path='/cities/:id' element={<Details />} />
             <Route path='/myTineraries' element={rolUser == null ? <SignUp /> : <MyItinerary />} />
-            <Route path='/profile' element={rolUser == null ? <SignUp /> : <MyProfile />} />
+            <Route path='/profile/:id' element={rolUser == null ? <SignUp /> : <MyProfile />} />
             <Route path='/newCity' element={rolUser === 'admin' ? <NewCityPage /> : <SignUp />} />
             <Route path='/edit-City' element={rolUser === 'admin' ? <EditCity /> : <SignUp />} />
+            <Route path='/edit-Profile/:id' element={rolUser == 'null' ? <SignUp/> : <EditProfile/>} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </Layout>
